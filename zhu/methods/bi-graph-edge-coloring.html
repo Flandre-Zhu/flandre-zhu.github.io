@@ -1,91 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="&amp;#x4E8C;&amp;#x5206;&amp;#x56FE;&amp;#x8FB9;&amp;#x67D3;&amp;#x8272;          &#x2F;* From extension vscode.markdown-math *&#x2F; @font-face{font-family:KaTeX_AMS;src:url(fonts&#x2F;KaTeX_AMS-Regular.woff2)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://flandre-zhu.github.io/zhu/methods/bi-graph-edge-coloring.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="&amp;#x4E8C;&amp;#x5206;&amp;#x56FE;&amp;#x8FB9;&amp;#x67D3;&amp;#x8272;          &#x2F;* From extension vscode.markdown-math *&#x2F; @font-face{font-family:KaTeX_AMS;src:url(fonts&#x2F;KaTeX_AMS-Regular.woff2)">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-20T06:09:41.398Z">
-<meta property="article:modified_time" content="2021-11-28T15:23:44.000Z">
-<meta property="article:author" content="Flandre Zhu">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.0.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/zhu/methods/bi-graph-edge-coloring.html" class="article-date">
-  <time class="dt-published" datetime="2022-02-20T06:09:41.398Z" itemprop="datePublished">2022-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
@@ -128,7 +41,7 @@
 
     </head>
     <body class="vscode-body vscode-light">
-        <p>本篇所有内容可以在yhx的 <a target="_blank" rel="noopener" href="https://yhx-12243.github.io/OI-transit/records/cf600F.html">这篇博客</a> 中看到。</p>
+        <p>本篇所有内容可以在yhx的 <a href="https://yhx-12243.github.io/OI-transit/records/cf600F.html">这篇博客</a> 中看到。</p>
 <h1 id="二分图边染色">二分图边染色</h1>
 <p>对于一个二分图，我们给它的每一条边染一个颜色，使得任意相邻的两条边颜色不一样。</p>
 <ol>
@@ -205,12 +118,12 @@ DFS(0,1,u,v,cu,cv);
 <pre><code>int mx=*max_element(deg+1,deg+a+b+1);
 printf(&quot;%d\n&quot;,mx);
 F(u,1,a)
-&#123;
+{
     F(i,1,mx) if (col[0][u][i])
-    &#123;
+    {
         ans[g[u][col[0][u][i]]]=i;
-    &#125;
-&#125;
+    }
+}
 F(i,1,m) printf(&quot;%d &quot;,ans[i]); puts(&quot;&quot;);
 </code></pre>
 <p>}
@@ -224,94 +137,3 @@ while(t--&gt;0) {flandre();}
 
     </body>
     </html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/methods/bi-graph-edge-coloring.html" data-id="ckzy527yx002nksun71t8af55" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-
-  
-    
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 Flandre Zhu<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-</body>
-</html>
