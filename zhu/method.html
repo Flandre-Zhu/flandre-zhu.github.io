@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="解题方法前言&#x2F;介绍在做一道题的时候，我们对情形进行一个分析。 你是一个有一定水平的选手。你为什么有一定水平，因为你训练过很长时间，做过很多题，打过很多次模拟赛。模拟赛会增加赛场经验，锻炼考场的时间分配。而做题的积累，可以慢慢的让大脑能做出更多题。 那为什么大脑能做出更多题呢？首先，显然不是原题匹配（或者相似题匹配）。撞上这样的好事概率很小 （撞上就赚飞了）。按我的理解，做题就像是建图。一个算法，或">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/method.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="解题方法前言&#x2F;介绍在做一道题的时候，我们对情形进行一个分析。 你是一个有一定水平的选手。你为什么有一定水平，因为你训练过很长时间，做过很多题，打过很多次模拟赛。模拟赛会增加赛场经验，锻炼考场的时间分配。而做题的积累，可以慢慢的让大脑能做出更多题。 那为什么大脑能做出更多题呢？首先，显然不是原题匹配（或者相似题匹配）。撞上这样的好事概率很小 （撞上就赚飞了）。按我的理解，做题就像是建图。一个算法，或">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img.atcoder.jp/arc118/cd0e4114b62108d6496689ce59c2bb91.png">
+<meta property="og:image" content="https://img.atcoder.jp/arc118/0c78a06b4ca6e3a1f5120c86bb8ced1c.png">
+<meta property="og:image" content="https://s2.loli.net/2022/01/23/nohJB8Pms4rglVQ.png">
+<meta property="article:published_time" content="2022-02-20T06:09:36.905Z">
+<meta property="article:modified_time" content="2022-01-23T14:50:28.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.atcoder.jp/arc118/cd0e4114b62108d6496689ce59c2bb91.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/method.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:36.905Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="解题方法"><a href="#解题方法" class="headerlink" title="解题方法"></a>解题方法</h1><h2 id="前言-介绍"><a href="#前言-介绍" class="headerlink" title="前言/介绍"></a>前言/介绍</h2><p>在做一道题的时候，我们对情形进行一个分析。</p>
+<p>你是一个有一定水平的选手。你为什么有一定水平，因为你训练过很长时间，做过很多题，打过很多次模拟赛。模拟赛会增加赛场经验，锻炼考场的时间分配。而做题的积累，可以慢慢的让大脑能做出更多题。</p>
+<p>那为什么大脑能做出更多题呢？首先，显然不是原题匹配（或者相似题匹配）。撞上这样的好事概率很小 （撞上就赚飞了）。按我的理解，做题就像是建图。一个算法，或者是一类问题，就像是一个点。到达了这个点，就万事大吉了。</p>
+<blockquote>
+<p>就好比如果一个问题，我转化成了网络流，跑一个Dinic就过了。</p>
+</blockquote>
+<p>而做一个题的分析过程，就像是在建边，或者锻炼大脑建边的能力。</p>
+<blockquote>
+<p>比如说，某某模型可以用某某建图方式然后跑网络流过去。它相当于直接把 “某某模型” 和 “网络流板子” 之间连了一条边。这样其实就可以缩点了，到达了这个点也看成是到达了终点。</p>
+<p>又或者，某个题不是常见的模型，但是我想出来了做法并通过了这题，那我们就锻炼了大脑建边的能力。不断想题，就相当于不断的让大脑试着去建边；在这个过程中，大脑越来越灵活，越来越熟练，能够更快的建边，并且变换着花样建边。</p>
+</blockquote>
+<p>那么我们做题的时候，就是要先把“点”记在心中，然后想办法去建“边”。</p>
+<h2 id="判断-什么可以做到，什么做不到"><a href="#判断-什么可以做到，什么做不到" class="headerlink" title="判断: 什么可以做到，什么做不到"></a>判断: 什么可以做到，什么做不到</h2><p>这个相当于上面讲的 “点”。</p>
+<p>能做到的事情，作为一个指导方向，我们要往这边靠；</p>
+<p>不能做到的事情，作为剪枝的依据。如果问题被转化成了一个常见不可做题，就迅速放弃思考。</p>
+<h3 id="能做到的事情-对的结论"><a href="#能做到的事情-对的结论" class="headerlink" title="能做到的事情/对的结论"></a>能做到的事情/对的结论</h3><p>这里“对的结论”，也可以作为思考的指导方向。比如用于构造题，或者我根据这个基本事实，写一个复杂度正确的乱搞。</p>
+<h4 id="网格图的哈密顿回路"><a href="#网格图的哈密顿回路" class="headerlink" title="网格图的哈密顿回路"></a>网格图的哈密顿回路</h4><p>一般图的哈密顿路是不好找的。如果数据范围很大还要找哈密顿路，可以考虑转化成网格图。</p>
+<blockquote>
+<p>如，ARC118D</p>
+</blockquote>
+<p>如果网格图有哈密顿路，那它的面积得是偶数，也就是说，$n,m$ 至少一个是偶数。不妨设 $n$ 是偶数。然后可以这样构造</p>
+<p><img src="https://img.atcoder.jp/arc118/cd0e4114b62108d6496689ce59c2bb91.png" alt=""></p>
+<p>图源自 ARC118D 的题解。</p>
+<p>如果网格图是循环的（第一行和最后一行连接，列同理），也可以这样，更加好写</p>
+<p><img src="https://img.atcoder.jp/arc118/0c78a06b4ca6e3a1f5120c86bb8ced1c.png" alt=""></p>
+<h4 id="exgcd的范围"><a href="#exgcd的范围" class="headerlink" title="exgcd的范围"></a>exgcd的范围</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">exgcd</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b,<span class="type">int</span>&amp;x,<span class="type">int</span>&amp;y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (b==<span class="number">0</span>) &#123;x=<span class="number">1</span>; y=<span class="number">0</span>; <span class="keyword">return</span>;&#125;</span><br><span class="line">    <span class="built_in">exgcd</span>(b,a%b,y,x); y-=x*(a/b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样实现的 exgcd，满足：</p>
+<p>$|x|\le \dfrac{b}{(a,b)}$，$|y|\le \dfrac{a}{(a,b)}$</p>
+<p>导出结论：如果 $a,b$ 都是 $1e18$，这样解出来的 $x,y$ 不会爆long long</p>
+<h4 id="n个数和为m，最小数-lt-m-n，最大数-gt-m-n"><a href="#n个数和为m，最小数-lt-m-n，最大数-gt-m-n" class="headerlink" title="n个数和为m，最小数&lt;=m/n，最大数&gt;=m/n"></a>n个数和为m，最小数&lt;=m/n，最大数&gt;=m/n</h4><p>反证即可，很显然</p>
+<p>常用于构造题</p>
+<h4 id="简单图最小度数的点度数不超过根号2m"><a href="#简单图最小度数的点度数不超过根号2m" class="headerlink" title="简单图最小度数的点度数不超过根号2m"></a>简单图最小度数的点度数不超过根号2m</h4><p>设度数为 $d_i$。</p>
+<p>考虑所有点的度数和，显然是 $2m$。$d_1…d_n$ 的和为 $2m$，因此最小的那个不超过 $\dfrac{2m}{n}$。</p>
+<p>同时，一个点的度数显然 $\le n-1$。</p>
+<p>因此最小度数不超过 $\min(\dfrac{2m}{n},n-1)$。</p>
+<p>显然，这个东西不超过 $\sqrt{2m}$。</p>
+<p>因此最小度数是 $O(\sqrt{m})$ 级别的，严格的说就是不超过 $\sqrt{2m}$。</p>
+<h4 id="关于随机的结论"><a href="#关于随机的结论" class="headerlink" title="关于随机的结论"></a>关于随机的结论</h4><ol>
+<li>随机一个串，出现次数 $\ge 2$ 的子串期望长度是 $\log n$</li>
+<li>两个随机串的期望LCP，LCSuf，LCSub长度是 $\log$</li>
+<li>随机权值笛卡尔树，期望树高 $\log$</li>
+<li>随机一种形态生成树（随prufer序列），期望树高 $\sqrt{n}$</li>
+<li>$\forall 2\le i\le n$ 随一个fa，期望树高 $\log{n}$</li>
+</ol>
+<h4 id="二分图博弈"><a href="#二分图博弈" class="headerlink" title="二分图博弈"></a>二分图博弈</h4><p>一张二分图上有一个棋子，两人轮流操作。每次可以沿着边走一步。不能重复经过某个点。不能动的人输。</p>
+<p>结论：如果最大匹配一定包含起点，则先手win，否则后手win。、</p>
+<p>做法：跑一遍匹配；删掉起点，跑一遍匹配；看俩匹配是否大小一样。</p>
+<h4 id="二分图边染色"><a href="#二分图边染色" class="headerlink" title="二分图边染色"></a>二分图边染色</h4><p><a href="/zhu/methods/bi-graph-edge-coloring.html">here</a></p>
+<h4 id="slope-trick做凸的dp"><a href="#slope-trick做凸的dp" class="headerlink" title="slope-trick做凸的dp"></a>slope-trick做凸的dp</h4><p><a href="/zhu/methods/slope-trick.html">here</a></p>
+<h4 id="偶完全图的匹配分解"><a href="#偶完全图的匹配分解" class="headerlink" title="偶完全图的匹配分解"></a>偶完全图的匹配分解</h4><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LightningUZ/p/15433313.html">here</a></p>
+<h4 id="偶完全图的链分解"><a href="#偶完全图的链分解" class="headerlink" title="偶完全图的链分解"></a>偶完全图的链分解</h4><p>从一个位置开始，循环（$n$ 往下一步到 $1$，$1$ 往前一步到 $n$）的 +1,-2,+3,-4… 走 $n-1$ 步，即可得到一个Z字的链，含 $n$ 个点。</p>
+<p>从 $1,2,3…n/2$ 开始走一遍，可以恰好覆盖每个边一次，并拆成 $n/2$ 条链。</p>
+<p>如图 （$n=6$）</p>
+<p><img src="https://s2.loli.net/2022/01/23/nohJB8Pms4rglVQ.png" alt=""></p>
+<h3 id="不可做的"><a href="#不可做的" class="headerlink" title="不可做的"></a>不可做的</h3><ul>
+<li><p>任意图的哈密顿回路</p>
+</li>
+<li><p>1e5图带负权最短路 / 最长路</p>
+</li>
+</ul>
+<h2 id="常见的问题处理技巧"><a href="#常见的问题处理技巧" class="headerlink" title="常见的问题处理技巧"></a>常见的问题处理技巧</h2><p>“处理” 包括但不限于转化。</p>
+<h3 id="打标记"><a href="#打标记" class="headerlink" title="打标记"></a>打标记</h3><p>打标记是常见的维护xxx型问题的转化方式。经过一波打标记，可以转换维护的东西，优化复杂度。</p>
+<h4 id="lazytag"><a href="#lazytag" class="headerlink" title="lazytag"></a>lazytag</h4><p>线段树的lazytag再经典不过了。</p>
+<p>值得注意的是，和线段树一样，树高不高的二叉搜索树都可以用lazytag维护。例如平衡树，或者 <strong>trie</strong> （少）。</p>
+<h4 id="图上点边标记"><a href="#图上点边标记" class="headerlink" title="图上点边标记"></a>图上点边标记</h4><p>经典（sb）题：一个图，$n$ 个点 $m$ 个边，求所有点度数的和。</p>
+<p>答案显然是 $2m$。这里就用了这个考虑方式，每个点把周围的边标记一下，每个边标记的和就是所有点度数的和。考虑每个边受到的影响，显然，它会被标记两次。因此，标记的和为 $2m$，也就是原问题答案。</p>
+<p>另一个经典题如，我们要维护一个树上路径的 “外围” 和，那么我们相当于要求每个点的所有儿子的权值和。那我们就把一个儿子的信息记在父亲上，就可以得到这个和了。</p>
+<blockquote>
+<p>好像经常被称为“毛毛虫和”</p>
+</blockquote>
+<p>同理，在一张图（或树）s上，如果遇到 “对于某个点的所有出边，做xxx操作”，可以把这个操作记在这个点上。询问的时候考虑周围边的贡献即可。</p>
+<h4 id="打时间戳"><a href="#打时间戳" class="headerlink" title="打时间戳"></a>打时间戳</h4><h5 id="DFS序"><a href="#DFS序" class="headerlink" title="DFS序"></a>DFS序</h5><p>这个太常见了吧。给每个点打上DFS序之后，就可以直接处理连续DFS到的一堆点。比如，一个子树，或者一条重链。</p>
+<h5 id="删除序-删除标记"><a href="#删除序-删除标记" class="headerlink" title="删除序/删除标记"></a>删除序/删除标记</h5><p>给删除的点标记它啥时候被删除的。忘了哪里有用，反正挺有用的。</p>
+<p>有一个删除标记的题是 AGC009D Uninity。这里不算是“删除序”吧。这题要进行dp，dp和树形态，删除方案均有关。我们记录每个点被删的时候所在连通块的权值，可以唯一确定删除方案，并且方便我们dp。</p>
+<p>[待补充]</p>
+<h3 id="建分层图"><a href="#建分层图" class="headerlink" title="建分层图"></a>建分层图</h3><p>有几种情况，我们会考虑对图分层。</p>
+<ol>
+<li><p>常用于网络流建图中：我们的行走方式与 “轮” 有关，并且轮数较少。此时我们可以把每一 “轮” 建出分层图。</p>
+</li>
+<li><p>点/边的种类数比较少，我们把每一种点/边单独抽出来，建出一层图，并处理层之间的关系。 （如 CF1610F，把边权为 $1$ 和 $2$ 的边建出两层来）</p>
+</li>
+</ol>
+<h3 id="构造“指令集”"><a href="#构造“指令集”" class="headerlink" title="构造“指令集”"></a>构造“指令集”</h3><p>对于操作转化型问题，我们可以通过手玩，发现：若干个操作，如何如何排列，并依次操作后，可以做到某件事情。“某件事情” 是一个比较常规的事情，比如说交换两个元素，或者是reverse一段区间。</p>
+<p>然后在这个基础上我们继续考虑原问题，通常更加容易。</p>
+<h3 id="前缀和与差分"><a href="#前缀和与差分" class="headerlink" title="前缀和与差分"></a>前缀和与差分</h3><p>实现区间与单点的转化。</p>
+<p>碰到区间多，杂，不好处理的时候，就差分一波变成两个单点。</p>
+<p>有时候也可以取一个前缀和再处理。比如处理一堆事件，做一个“前缀和”之后，事件就变成了连续的一段。常见的应用是线段树分治里处理“存活区间”的一步。</p>
+<p>[待更新]</p>
+<h2 id="专项整理"><a href="#专项整理" class="headerlink" title="专项整理"></a>专项整理</h2><p>[待更新]</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/method.html" data-id="ckzy4tkwg00029gunfozq4gkn" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

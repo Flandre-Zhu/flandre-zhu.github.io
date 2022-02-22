@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.12.09OI做题: AGC056D Subset Sum Game前几天的agc的D题。 直接对着有向图游戏的理论做，$O(2^n)$。 考虑转化。Bob任意取，Alice都能有解。除了想到有向图游戏之外，还要想到二分图博弈。 即我们找到一组匹配之后，你取一个，我就取匹配，然后就一定能赢。 对于本题，可以证明，若A能赢，一定能通过如下的策略赢 （来自CF上本场比赛的 评论）：  首先我">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-09.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.12.09OI做题: AGC056D Subset Sum Game前几天的agc的D题。 直接对着有向图游戏的理论做，$O(2^n)$。 考虑转化。Bob任意取，Alice都能有解。除了想到有向图游戏之外，还要想到二分图博弈。 即我们找到一组匹配之后，你取一个，我就取匹配，然后就一定能赢。 对于本题，可以证明，若A能赢，一定能通过如下的策略赢 （来自CF上本场比赛的 评论）：  首先我">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.868Z">
+<meta property="article:modified_time" content="2021-12-10T05:53:54.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-09.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.868Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-12-09"><a href="#2021-12-09" class="headerlink" title="2021.12.09"></a>2021.12.09</h1><h2 id="OI做题-AGC056D-Subset-Sum-Game"><a href="#OI做题-AGC056D-Subset-Sum-Game" class="headerlink" title="OI做题: AGC056D Subset Sum Game"></a>OI做题: AGC056D Subset Sum Game</h2><p>前几天的agc的D题。</p>
+<p>直接对着有向图游戏的理论做，$O(2^n)$。</p>
+<p>考虑转化。Bob任意取，Alice都能有解。除了想到有向图游戏之外，还要想到二分图博弈。</p>
+<p>即我们找到一组匹配之后，你取一个，我就取匹配，然后就一定能赢。</p>
+<p>对于本题，可以证明，若A能赢，一定能通过如下的策略赢 （来自CF上本场比赛的 <a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/97510">评论</a>）：</p>
+<ul>
+<li><p>首先我们枚举 $A$ 的第一步 $p$ 和 $B$ 的第一步 $q$</p>
+</li>
+<li><p>对于剩下的数，排好序，两个两个匹配 （即，$(1,2),(3,4),(5,6)…$）</p>
+</li>
+<li><p>设原序列排序后为 $A_1…A_n$，匹配为 $(x_1,y_1),(x_2,y_2)…(x_m,y_m)$，其中 $m=\dfrac{n}{2}-1$，且 $x_i\le y_i$。</p>
+</li>
+<li><p>若存在一个 $(p,q)$，满足 $L\le A_p+\sum x_i \le A_p+\sum y_i\le R$，那么有解，否则没有解</p>
+</li>
+</ul>
+<p>看起来挺对的，确实也AC了。但我们如何考虑并说明正确性呢？</p>
+<p>我们考虑后手的必胜策略，因为先手比后手相当于就多一步枚举，所以后手比先手简单。</p>
+<blockquote>
+<p>注：这里不是指Alice输的情况，而是后手取的集合的和在 $[L,R]$ 称为后手赢，考虑这样的后手必胜策略</p>
+</blockquote>
+<p>后手存在必胜策略，当且仅当，先手无论走哪一步，我都有一个应付的策略，可以让我赢。</p>
+<p>我们一步一步考虑。那先做两步。设先手先走了一个 $p$，后手走 $q=w(p)$，$w(p)\neq p$。（这个 $w$ 就是后手的策略）剩下了 $n-2$ 个点，又轮到先手，构成子问题。</p>
+<p>那么我们有必胜策略，当且仅当剩下 $n-2$ 个数的子问题中，后手可以把和做到 $[L-A_q,R-A_q]$ 之间。</p>
+<p>现在归纳证明：若后手有必胜策略，则一定满足 $L\le s_1\le s_0\le R$，其中 $s_0,s_1$ 分别表示 $A$ 的偶数、奇数位置的和。 （这个 $s_0,s_1$ 就是上面说的匹配的 $y,x$ 的和）</p>
+<p>在这 $n-2$ 个数的子问题中，假设这个结论已经正确了。那么在当前这个问题中，我们先取了一对匹配，假设是 $(x,y)$，$x\le y$。那么这 $n-2$ 个数中，设后手拿到和为 $s’$。那么先手在当前这步，可以让后手取到 $x$ 或 $y$。那么后手必胜，也就是 $s’+x,s’+y$ 都在 $[L,R]$ 区间内。</p>
+<p>$s’$ 是 $n-2$ 个数中后手拿到的和，最小是其匹配的 $\sum x_i$，最大是其匹配的 $\sum y_i$。那么 $s’+x,s’+y$ 的最小值就是 $x+\sum x_i$，最大值是 $y+\sum y_i$。它被包含在 $[L,R]$ 中，则有解。注意到这个东西就是原问题的结论。因此，我们这个结论是对的。</p>
+<p>对于先手，枚举第一步即可，就得到了上面说的那个做法。维护一下区间的奇数/偶数位置和，枚举 $p,q$ 后可以 $O(1)$ 计算 $p,q$ 是否行。复杂度 $O(n^2)$。</p>
+<h2 id="whk"><a href="#whk" class="headerlink" title="whk"></a>whk</h2><p>做了好多物理。好多好多。已经完全变成物理的形状了。</p>
+<p>感觉物理很绕啊，而且非常容易少想几个力。有些题，当我的直觉和我的计算出现冲突的时候，我就会不停的验算，直到结果对，或者我睡着。睡醒发现我少看一个力，我直觉是对的，我计算也没错，就是我想错了。</p>
+<p>物理做下来好jb困啊我草。</p>
+<p>cp说，要提高定力，可以离开舒适区，跑到公共场合去写作业。我觉得很有道理，我可以尝试去图书馆里写</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-09.html" data-id="ckzy4tl2e001b9gun1qje9sdv" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

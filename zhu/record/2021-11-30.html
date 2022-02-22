@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.11.30今天也被hyh搞了。 11月的最后一天，马上就要12月了qwq 做题还想搞很多题的，卡在ARC130的F卡了好久。一天就做了这个题。 打了几个乱搞，搞不过去，浪费了很久时间。看来我们要想正道。 首先我们发现，这样操作完一遍之后，$a$ 一定是凸的。那先打个凸包。但实际上还可以更小，因此这个东西WA了。 观察一波，我们发现，操作一遍之后，最小值的位置以及值不变。 （这个是题解的考">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-11-30.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.11.30今天也被hyh搞了。 11月的最后一天，马上就要12月了qwq 做题还想搞很多题的，卡在ARC130的F卡了好久。一天就做了这个题。 打了几个乱搞，搞不过去，浪费了很久时间。看来我们要想正道。 首先我们发现，这样操作完一遍之后，$a$ 一定是凸的。那先打个凸包。但实际上还可以更小，因此这个东西WA了。 观察一波，我们发现，操作一遍之后，最小值的位置以及值不变。 （这个是题解的考">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.396Z">
+<meta property="article:modified_time" content="2021-12-01T15:42:54.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-11-30.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.396Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-11-30"><a href="#2021-11-30" class="headerlink" title="2021.11.30"></a>2021.11.30</h1><p>今天也被hyh搞了。</p>
+<p>11月的最后一天，马上就要12月了qwq</p>
+<h2 id="做题"><a href="#做题" class="headerlink" title="做题"></a>做题</h2><p>还想搞很多题的，卡在ARC130的F卡了好久。一天就做了这个题。</p>
+<p>打了几个乱搞，搞不过去，浪费了很久时间。看来我们要想正道。</p>
+<p>首先我们发现，这样操作完一遍之后，$a$ 一定是凸的。那先打个凸包。但实际上还可以更小，因此这个东西WA了。</p>
+<p>观察一波，我们发现，操作一遍之后，最小值的位置以及值不变。</p>
+<p>（这个是题解的考虑）考虑 $A’(i)=A(i)+i$。如果我们操作在 $A’$ 上，操作 $i,k,j=\dfrac{i+k}{2}$ 位置，$A’(j)$ 会变成 $\dfrac{A’(i)+A’(k)}{2}=\dfrac{A(i)+A(k)+i+k}{2}=\dfrac{A(i)+A(k)}{2}+j$ 。</p>
+<p>也就是说，我们直接把 $A$ 做修改，然后 $i$ 位置加上 $i$，得到的就是 $A’$ 数组了！</p>
+<p>根据上面那个结论可以推得，$A’$ 数组的最小值位置以及值不变。</p>
+<p>再想发现，$A(i)+2i,+3i,+4i…-i,-2i,-3i…$ 都满足这个性质。用几何语言描述，斜率为 $…,-3,-2,-1,0,1,2,3,…$ 的直线，切点集的位置都不变。</p>
+<p>简单想象一波，这些整数斜率的直线凑一起，形成的凸壳，取 $x$ 坐标为 $1,2,3…n$ 处的 $y$ 坐标，就是我们要求的数组。</p>
+<p>因此我们求出凸壳之后，处理出每个点被哪些斜率的直线切过去，然后用这些整数斜率的直线，拼出一个新的凸壳，然后计算一下每个点的 $y$ 坐标即可。</p>
+<p>总结：乱搞随机没前途，冷静分析仔细观察想想性质考虑正解。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-11-30.html" data-id="ckzy4tkxg00159gunfpo3bynm" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

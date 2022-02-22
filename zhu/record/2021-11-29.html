@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.11.29hyh那个鸟人一直搞我qaq 但是他好强啊 做题做了ARC130的C,D C题如果不进位，答案就是A,B的位和的和 进一次位，答案减少9。相当于要让答案减少的最多。 当最低位和 $&gt;&#x3D;10$，前面连续一段和 $&gt;&#x3D;9$ （注意 $0+9$ 的情况），容易发现，此时能产生连续的进位。并且进位次数最多一定是这样进位。 （注意到每个位置最多进1） 然后可以贪心。如果不想贪">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-11-29.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.11.29hyh那个鸟人一直搞我qaq 但是他好强啊 做题做了ARC130的C,D C题如果不进位，答案就是A,B的位和的和 进一次位，答案减少9。相当于要让答案减少的最多。 当最低位和 $&gt;&#x3D;10$，前面连续一段和 $&gt;&#x3D;9$ （注意 $0+9$ 的情况），容易发现，此时能产生连续的进位。并且进位次数最多一定是这样进位。 （注意到每个位置最多进1） 然后可以贪心。如果不想贪">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.303Z">
+<meta property="article:modified_time" content="2021-12-10T01:38:38.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-11-29.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.303Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-11-29"><a href="#2021-11-29" class="headerlink" title="2021.11.29"></a>2021.11.29</h1><p>hyh那个鸟人一直搞我qaq</p>
+<p>但是他好强啊</p>
+<h2 id="做题"><a href="#做题" class="headerlink" title="做题"></a>做题</h2><p>做了ARC130的C,D</p>
+<h3 id="C题"><a href="#C题" class="headerlink" title="C题"></a>C题</h3><p>如果不进位，答案就是A,B的位和的和</p>
+<p>进一次位，答案减少9。相当于要让答案减少的最多。</p>
+<p>当最低位和 $&gt;=10$，前面连续一段和 $&gt;=9$ （注意 $0+9$ 的情况），容易发现，此时能产生连续的进位。并且进位次数最多一定是这样进位。</p>
+<p>（注意到每个位置最多进1）</p>
+<p>然后可以贪心。如果不想贪心，直接写个网络流即可。</p>
+<h3 id="D题"><a href="#D题" class="headerlink" title="D题"></a>D题</h3><p>想了好久，看题解做出来的。</p>
+<p>值得反复回味的一个题。</p>
+<p>等价的转化一下，每个点要么比周围都大（称为大点），要么比周围都小（称为小点）。</p>
+<p>分配大小点的方案只有恰好两种，相当于黑白染色。</p>
+<p>一种思路是把大小关系建出有向图。此时这个有向图是个二分图。求它的拓扑序数量。</p>
+<p>简单思考，这东西不太好做。我们换一下。</p>
+<p>接下来就容易想到树形dp了。注意到 $n^2$ 的复杂度，设 $f(u,x)$ 表示 $u$ 子树里，$u$ 权值为 $x$，方案数。</p>
+<p>对于大点，就让 $v$ 的权值都小于 $x$，否则都大于 $x$。但是这样有一个问题：子树里面可能会有和 $x$ 相等的，与题意不符。这是这个状态的局限性，是无法解决的根本问题。</p>
+<p>因此，咱换一个状态来设。可以从许多树形排列计数的问题中获得这个思路：设 $f(u,x)$ 表示 $u$ 的子树里，$u$ 排名 $x$，方案数。</p>
+<blockquote>
+<p>“其它树形排列计数问题”，暂时没有例子，我只是记得做过</p>
+</blockquote>
+<p>转移的时候用组合数来分配选择空间，确保不重复这个条件满足。</p>
+<p>直接对着全部的子树做，相当不好做。考虑逐一合并子树。</p>
+<p>设更新出来的dp是 $f’$，当前的是 $f$。当前儿子是 $v$。</p>
+<p>枚举 $u$ 排名 $x_1$，$v$ 排名 $x_2$，更新完之后是 $x$ 名。即，我们要求 $f(u’,x)$。设 $n$ 为 $u$ 当前子树大小（即，$u$ 本身，与计算过的子树），$m$ 为 $v$ 子树大小。</p>
+<p>$x$ 之前有 $x-1$ 个东西。其中来自 $u$ 的有 $x_1-1$ 个。剩下的那些，就强制分配给 $v$，因此不用数。这里方案数就是 $\binom{x-1}{x_1-1}$。</p>
+<p>$x$ 之后有 $n+m-x$ 个东西。其中来自 $u$ 的有 $n-x$ 个。这里方案数是 $\binom{n+m-x}{n-x}$</p>
+<p>然后乘上 $f(u,x_1)\times f(v,x_2)$，加到 $f’(u,x)$ 即可。</p>
+<p>注意到两个组合数与 $x_2$ 都没有关系，用前缀和优化掉 $x_2$。此时合并复杂度是 $O(n(n+m))$。</p>
+<p>再注意到，$x_1\le x \le x_1+m$，$x$ 的枚举范围缩小为 $m$。复杂度变为 $O(nm)$。</p>
+<p>这样复杂度就对了，总共是 $n^2$ 的。</p>
+<p>思路总结：</p>
+<ul>
+<li>小转化，然后想到dp</li>
+<li>试一试状态，发现 $f(u,x)$ 表示 $u$ 子树里 $u$ 权值排名为 $x$，这个好使</li>
+<li>写出暴力的dp转移，优化。<blockquote>
+<p>优化前，联想到经典“树形背包”的复杂度证明，只要能 $O(nm)$ 的合并，就能过</p>
+<p>对着这个做，往这方面想，就想出来了。</p>
+</blockquote>
+</li>
+</ul>
+<p>lzj同学的思路：</p>
+<blockquote>
+<p>首先也是“大点”“小点”的转化。接下来考虑dp。</p>
+<p>考虑还需要哪些信息才能dp。考虑维护出每个子树里的权值的ov （排序后的序列）。如果 $u$ 是小点，$v$ 是大点，那么 $v$ 合并过去，一定要排在 $u$ 的后面。</p>
+<p>由此想到我们需要记排名。</p>
+<p>后续的转移和优化，与本篇相同。</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-11-29.html" data-id="ckzy4tkxf00149gun471788ld" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

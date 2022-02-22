@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="交流蒋仕彪对于细节复杂，难以想清楚的问题：  这些题本身的算法性就很弱，难点就在细节上；而“想清楚细节”本身就是一种能力，不用急于一时，但需要不断锻炼。 除了自己在赛前或者赛后思考、写题、补题外，这类细节题还有一个很重要的学习方法，就是观察出题人、别人是怎么想、怎么写的。像 cf 或者 atcoder 这类题库都是开源的，所以你遇到细节题后，可以很方便地学习到别人的写法（我以前喜欢在 cf 上在">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/communication.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="交流蒋仕彪对于细节复杂，难以想清楚的问题：  这些题本身的算法性就很弱，难点就在细节上；而“想清楚细节”本身就是一种能力，不用急于一时，但需要不断锻炼。 除了自己在赛前或者赛后思考、写题、补题外，这类细节题还有一个很重要的学习方法，就是观察出题人、别人是怎么想、怎么写的。像 cf 或者 atcoder 这类题库都是开源的，所以你遇到细节题后，可以很方便地学习到别人的写法（我以前喜欢在 cf 上在">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:36.698Z">
+<meta property="article:modified_time" content="2021-12-10T03:38:26.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/communication.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:36.698Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="交流"><a href="#交流" class="headerlink" title="交流"></a>交流</h1><h2 id="蒋仕彪"><a href="#蒋仕彪" class="headerlink" title="蒋仕彪"></a>蒋仕彪</h2><p>对于细节复杂，难以想清楚的问题：</p>
+<ol>
+<li>这些题本身的算法性就很弱，难点就在细节上；而“想清楚细节”本身就是一种能力，不用急于一时，但需要不断锻炼。</li>
+<li>除了自己在赛前或者赛后思考、写题、补题外，这类细节题还有一个很重要的学习方法，就是观察出题人、别人是怎么想、怎么写的。像 cf 或者 atcoder 这类题库都是开源的，所以你遇到细节题后，可以很方便地学习到别人的写法（我以前喜欢在 cf 上在 submission 里按 solution size 排序，挑最短的代码学习）。</li>
+</ol>
+<p>对于 CF553E Kyoya and Train</p>
+<blockquote>
+<p>对于这种“求最优决策下的期望”的题目，方程意义一般都会是“从起点到现在/从现在到终点，在所有可能出现的局面中我都选择对我最优的那种，那么总计花费的平均是多少？”</p>
+<p>我建议你在思考的时候，把“期望”这个词具象化，就是它具体是什么东西的平均</p>
+</blockquote>
+<p>关于分层图</p>
+<blockquote>
+<p>当想要构建的图有明显的层次关系：同层之间错综复杂的边，然后整个层到下一个层只有单向的边，即如果以层为单位，层之间往往是一个链式或是拓扑序这样的结构。</p>
+<p>和图论有关的分层图，一般的效果有：能使求解的步骤更清晰，更容易写代码；优化复杂度；利用拓扑序的性质做 dp 等。</p>
+</blockquote>
+<h2 id="nealchen"><a href="#nealchen" class="headerlink" title="nealchen"></a>nealchen</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/communication.html" data-id="ckzy4tkwb00009gunhd4d95zn" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.12.08杂今晚睡的很晚，但是我的颓废显著减少。算是攻克了一个难关，虽然还没有完全攻克。 睡的晚是在卡那个poly题的常数。卡常都去死啊。 做题: Kyoya and Train就做了这一个题。 （对于我这种垃圾）首先要理清楚题意，什么是知道的，我们要做什么。 根据题意，当我们到一个点时，我们会根据已经走过的时间来进行决策。因此，（在哪，用时） 这个状态是必要的。 假设当前在 $u$，用">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-08.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.12.08杂今晚睡的很晚，但是我的颓废显著减少。算是攻克了一个难关，虽然还没有完全攻克。 睡的晚是在卡那个poly题的常数。卡常都去死啊。 做题: Kyoya and Train就做了这一个题。 （对于我这种垃圾）首先要理清楚题意，什么是知道的，我们要做什么。 根据题意，当我们到一个点时，我们会根据已经走过的时间来进行决策。因此，（在哪，用时） 这个状态是必要的。 假设当前在 $u$，用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.761Z">
+<meta property="article:modified_time" content="2021-12-10T02:01:46.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-08.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.761Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-12-08"><a href="#2021-12-08" class="headerlink" title="2021.12.08"></a>2021.12.08</h1><h2 id="杂"><a href="#杂" class="headerlink" title="杂"></a>杂</h2><p>今晚睡的很晚，但是我的颓废显著减少。算是攻克了一个难关，虽然还没有完全攻克。</p>
+<p>睡的晚是在卡那个poly题的常数。卡常都去死啊。</p>
+<h2 id="做题-Kyoya-and-Train"><a href="#做题-Kyoya-and-Train" class="headerlink" title="做题: Kyoya and Train"></a>做题: Kyoya and Train</h2><p>就做了这一个题。</p>
+<p>（对于我这种垃圾）首先要理清楚题意，什么是知道的，我们要做什么。</p>
+<p>根据题意，当我们到一个点时，我们会根据已经走过的时间来进行决策。因此，（在哪，用时） 这个状态是必要的。</p>
+<p>假设当前在 $u$，用时为 $t$，用 $(u,t)$ 描述。那么我们需要找到一个出边 $u\to v$，满足我们从 $v$ 走是最优的，然后就往 $v$ 走。很明显，这叫 “最优决策”。</p>
+<p>考虑这个转移过程，发现我们是反过来决策的。因此设 $f(u,t)$ 表示 $u$ 当前耗时 $t$，走到 $n$，期望花钱数（含罚款）的最小值。</p>
+<blockquote>
+<p>期望的问题中，通常设的是从当前到终止状态的xxx期望。因为这样方便转移，也方便确定边界条件。</p>
+</blockquote>
+<p>设原题中的时间限制为 $T$，超过 $T$ 就罚款。为了方便处理，第二位开到 $2T$。边界条件为 $f(n,t)=[t&gt;T]\times x$，$x$ 为罚款。$f(u,t)=x+dis(u,n),\ t&gt;T$。$dis$ 表示最短路，可以floyd做。</p>
+<p>然后考虑转移。对于 $u$，设 $trans(t,u,v)$ 表示 $(u,t)$ 走 $v$ 的转移的花费。那么 $f(u,t)=\min{u\to v,\ trans(t,u,v)}$</p>
+<blockquote>
+<p>因为 $u,v$ 一定是原图上的边，实现时，我们把状态 $u,v$ 用边的编号 $i$ 表示，状态数从 $Tn^2$ 降到 $Tm$，即变成 $trans(t,i)$。但考虑起来还是 $trans(t,u,v)$ 更加方便，后面用这个写法。</p>
+</blockquote>
+<p>考虑计算 $trans(t,u,v)$。枚举 $u\to v$ 的时间 $d$:</p>
+<script type="math/tex; mode=display">
+trans(t,u,v)=cost(u,v)+\sum\limits_{d=1}^{T} P(d)\times f(v,t+d)</script><p>其中 $cost(u,v)$ 表示 $(u,v)$ 边的车票钱，$P(d)$ 表示这条边耗时为 $d$ 的概率，就是给定的那个。</p>
+<p>这个转移是 $O(mT^2)$ 的。很显然过不去。而且好像还有环。</p>
+<p>此时我们注意到第二维时间单调递增，很好，没环了。但复杂度还高高在上。</p>
+<p>注意到这个形式很像一个减法卷积。但是 $f$ 要不断计算。所以我们要cdq分治，通过不断的贡献来得到一个位置的真正的 $trans$ 值。</p>
+<p>假设当前要计算 $[l,r]$，取 $M=(l+r)/2$。先计算右半边 $[M+1,r]$。考虑右半边已经算好的东西对左半边的贡献。注意这里不考虑左半边内部的贡献。此时我们就可以开心的写减法卷积了，就是把 $f(v,t)$ 和 $P$ 搞出来，其中一个 reverse 一下然后卷。注意这里要精细实现，要写一个 $O((r-l+1)\times log)$ 的，而不是 $O(T)$ 的，否则又会退化成 $T^2$。</p>
+<p>考虑完这个贡献完了就去左半边内部贡献即可。这就是经典的cdq分治。然后就做完了，复杂度 $O(mT\log^2 T)$。</p>
+<p><strong>稍微</strong> 卡常。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/553/submission/138591821">参考实现</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-08.html" data-id="ckzy4tl2e001a9gun5797e5f2" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

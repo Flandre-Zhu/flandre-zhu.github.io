@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="[toc] 2021-11-15做题泛做题。今天选的是CF div2的后面几题来做。目的是，让我勇于挑战难题，并尝试通过逐步递进法，慢慢接近正解。 今天颓废的比较多，也复习以前的算法，接下来就是做题环节。 AC数量：3 CF1605E限时1h，用时50min。 肯定要先考虑确定了 $b$ 之后咋做，这是显然的。 我观察出来，$b_1$ 的调整只能通过 $a_1$ 修改。搞完 $b_1$ 之后，$b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-11-15.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="[toc] 2021-11-15做题泛做题。今天选的是CF div2的后面几题来做。目的是，让我勇于挑战难题，并尝试通过逐步递进法，慢慢接近正解。 今天颓废的比较多，也复习以前的算法，接下来就是做题环节。 AC数量：3 CF1605E限时1h，用时50min。 肯定要先考虑确定了 $b$ 之后咋做，这是显然的。 我观察出来，$b_1$ 的调整只能通过 $a_1$ 修改。搞完 $b_1$ 之后，$b">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.077Z">
+<meta property="article:modified_time" content="2021-11-25T14:32:40.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-11-15.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.077Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>[toc]</p>
+<h1 id="2021-11-15"><a href="#2021-11-15" class="headerlink" title="2021-11-15"></a>2021-11-15</h1><h2 id="做题"><a href="#做题" class="headerlink" title="做题"></a>做题</h2><p>泛做题。今天选的是CF div2的后面几题来做。目的是，让我勇于挑战难题，并尝试通过逐步递进法，慢慢接近正解。</p>
+<p>今天颓废的比较多，也复习以前的算法，接下来就是做题环节。</p>
+<p>AC数量：3</p>
+<h3 id="CF1605E"><a href="#CF1605E" class="headerlink" title="CF1605E"></a>CF1605E</h3><p>限时1h，用时50min。</p>
+<p>肯定要先考虑确定了 $b$ 之后咋做，这是显然的。</p>
+<p>我观察出来，$b_1$ 的调整只能通过 $a_1$ 修改。搞完 $b_1$ 之后，$b_2$ 也只能通过 $a_2$ 修改。不断推下去即可。</p>
+<p>修改一个位置后，可以暴力枚举倍数处理影响，这是 $O(n\ln n)$ 的。因此这样做一次的复杂度是 $O(n\ln n)$</p>
+<p>这样不利于做动态的 $b_1$。因此，我们要试着写一个东西出来，来做这个。</p>
+<p>我接下来就想着，大概是要抽象出来一个式子，关于 $b_1$。经过一番思考，我把上述递推过程变成了这样：</p>
+<ul>
+<li>设 $f(i)$ 表示对 $i$ 以及其倍数的位置，加上了多少，可以是负的。</li>
+<li>得到递推：$f(i)=b<em>i-(\sum\limits</em>{d|i,d&lt;i} f(d)+a_i)$。后面那一堆是经过操作后 $a_i$ 的实际值，用 $b_i$ 减去即可。</li>
+<li>操作代价就是 $\sum |f(i)|$</li>
+</ul>
+<p>经过这样一波递推之后，我们可以得到每个 $f(i)$ 关于 $b_1$ 的表达式。设 $b_1=x,\ f(i)=kx+b$。</p>
+<p>那咱相当于，已知一堆 $kx+b$，给定 $x$，求 $\sum |kx+b|$。这看起来非常的好做啊。</p>
+<p>我们把这些绝对值函数按分界点 （即 $\dfrac{-b}{k}$）排序，每次二分得到一段前缀取正，一段后缀取负。然后就可以快速计算这个数了。</p>
+<p>然后注意细节，就做完了。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1605/submission/135584494">代码</a></p>
+<h3 id="CF1604F"><a href="#CF1604F" class="headerlink" title="CF1604F"></a>CF1604F</h3><p>限时：50min 超时：15min （看了题解）</p>
+<p>这题我有阴影，因为我在赛场上没做出来。</p>
+<p>我看到这题，肯定先考虑：$c$ 怎么做？</p>
+<p>这是常见套路。一波莫反后，设 $h(x)=\sum\limits<em>{i=1}^{x}\mu(i)(x/i)^2$。那么 $c(l,r)=\sum\limits</em>{i=l}^{r}h(r/i)$。然后就可以 $O(\sqrt{r})$ 的做 $c(l,r)$。</p>
+<p>接下来就只能优化dp了。dp有哪些优化办法？</p>
+<ol>
+<li>斜率优化/单调队列优化</li>
+<li>决策单调性优化</li>
+<li>dp是凸的，用奇技淫巧优化</li>
+<li>dp有妙妙性质，用奇技淫巧优化</li>
+</ol>
+<p>我是先考虑了4。把 $10\times 10$ 的dp打表，发现：</p>
+<p>对于 $f(i,j)$，当 $j$ 够大的时候，$f(i,j)=i$。</p>
+<blockquote>
+<p>官方题解称其为 “cute observation”。<br>实际上这个 $j&gt;\log_2 i$ 的时候就满足了</p>
+</blockquote>
+<p>我观察了一波小数据，以为是 $j&gt;\sqrt{i}$ 的时候满足。</p>
+<blockquote>
+<p>那你没有注意到 $50$ 的时候大于 $5$ 就满足了吗？？？</p>
+</blockquote>
+<p>那我们的 $O(n^2)$ 的状态数就减少到了 $O(n\sqrt{n})$，转移是 $O(n^2\sqrt{n})$ 的。再加上 $c$ 的计算复杂度，此时是 $O(n^3)$ 的。</p>
+<p>然后我再猜，它有决策单调性。把转移点打出来表，发现，确实！</p>
+<p>然后我们用分治做转移。枚举 $j$ 这一维，复杂度是 $O(\sqrt{n}\times n\log n \times \sqrt{n})=O(n^2\log n)$，常数小，能过到 $1e4$。</p>
+<blockquote>
+<p>这里一个log是分治做决策单调性的 $\log$，比较小。一个根号是计算 $c$ 的根号，也比较小。因此它常数小。</p>
+</blockquote>
+<p>但是我肯定过不去 $1e5$ 吧，然后我死活想不到优化，限时的50min结束了。</p>
+<p>我去看题解，发现我那个 $j&gt;\sqrt{i}$ 猜错了，$\log$ 就可以。</p>
+<p>接下来，我把我的 $340$ 改成 $20$，复杂度变成 $O(n\sqrt{n}\log^2{n})$，有点卡，但是过了。很快啊。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1604/submission/135610340">代码</a></p>
+<h3 id="CF1606E"><a href="#CF1606E" class="headerlink" title="CF1606E"></a>CF1606E</h3><p>我先把这题读了一下题，然后想了一会，正好赶上休息时间。而我已经想过一会了，我就只给了自己40min的限时，开始做。然而还是没能做出来= =</p>
+<p>肯定先排序吧。我一开始以为要找规律，猜结论，我手玩了好久。没玩出啥结论。</p>
+<p>然后我发现了这个 $500$ 的数据。我要是玩出了啥结论，应该是能做 $1e5$ 的才对。这个应该是 $O(n^2),O(n^3)$ 之类的复杂度。</p>
+<p>然后我观察了一下我玩的东西，发现我每次活的人是一个后缀，每次死掉当前后缀的一段前缀（显然）。</p>
+<p>我们对着这个dp。设 $f(r,n,m)$ 表示第 $r$ 轮，活着 $n$ 个人，血最多的为 $m$，方案数。显然可以转移。</p>
+<p>写出来转移是 $O(n^4)$ 的时间，$O(n^2)$ 的空间（$r$ 可以滚）。接下来怎么做呢？</p>
+<p>遗憾的是我没有在限时期间完成。限时结束后，我参考了题解，发现状态可以少一维。</p>
+<p>设 $f(n,d)$ 表示，到第 $n$ 轮，每人受到伤害为 $d$，方案数。这玩意也可以转移，答案就是 $f(0,*)$。复杂度 $O(n^3)$。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.ml/contest/1606/submission/135740370">代码</a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>对于困难的问题，可以考虑先写一个复杂度高的傻逼做法，然后通过观察，思考，优化，逐步得到正解。</p>
+<p>打表是个好用的策略，可以有效观察出dp的性质。</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>颓废了好久。</p>
+<p>复习了点分治的板子。</p>
+<p>详细数据暂缺，因为颓。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-11-15.html" data-id="ckzy4tkxd00129gun4jaj9c3s" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

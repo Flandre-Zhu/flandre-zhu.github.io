@@ -1,4 +1,91 @@
 <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="&#x2F;* From extension vscode.markdown-math *&#x2F; @font-face{font-family:KaTeX_AMS;src:url(fonts&#x2F;KaTeX_AMS-Regular.woff2) format(&quot;woff2&quot;),url(fonts&#x2F;KaTeX_AMS-Regular.woff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/contests/NOIP-Cl-6-src/C.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="&#x2F;* From extension vscode.markdown-math *&#x2F; @font-face{font-family:KaTeX_AMS;src:url(fonts&#x2F;KaTeX_AMS-Regular.woff2) format(&quot;woff2&quot;),url(fonts&#x2F;KaTeX_AMS-Regular.woff">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:40.884Z">
+<meta property="article:modified_time" content="2021-11-27T10:27:02.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/contests/NOIP-Cl-6-src/C.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:40.884Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
     <html>
     <head>
         <meta charset="UTF-8">
@@ -51,174 +138,174 @@
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MEM(a,x) memset(a,x,sizeof(a))</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FK(x)    MEM(x,0)</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> p_b push_back</span>
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">I</span><span class="hljs-params">()</span> </span>{<span class="hljs-keyword">char</span> c=getchar(); <span class="hljs-keyword">int</span> x=<span class="hljs-number">0</span>; <span class="hljs-keyword">int</span> f=<span class="hljs-number">1</span>; <span class="hljs-keyword">while</span>(c&lt;<span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">or</span> c&gt;<span class="hljs-string">&#x27;9&#x27;</span>) f=(c==<span class="hljs-string">&#x27;-&#x27;</span>)?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>,c=getchar(); <span class="hljs-keyword">while</span>(c&gt;=<span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> c&lt;=<span class="hljs-string">&#x27;9&#x27;</span>) x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>),c=getchar(); <span class="hljs-keyword">return</span> ((f==<span class="hljs-number">1</span>)?x:-x);}
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">I</span><span class="hljs-params">()</span> </span>&#123;<span class="hljs-keyword">char</span> c=getchar(); <span class="hljs-keyword">int</span> x=<span class="hljs-number">0</span>; <span class="hljs-keyword">int</span> f=<span class="hljs-number">1</span>; <span class="hljs-keyword">while</span>(c&lt;<span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">or</span> c&gt;<span class="hljs-string">&#x27;9&#x27;</span>) f=(c==<span class="hljs-string">&#x27;-&#x27;</span>)?<span class="hljs-number">-1</span>:<span class="hljs-number">1</span>,c=getchar(); <span class="hljs-keyword">while</span>(c&gt;=<span class="hljs-string">&#x27;0&#x27;</span> <span class="hljs-keyword">and</span> c&lt;=<span class="hljs-string">&#x27;9&#x27;</span>) x=(x&lt;&lt;<span class="hljs-number">1</span>)+(x&lt;&lt;<span class="hljs-number">3</span>)+(c^<span class="hljs-number">48</span>),c=getchar(); <span class="hljs-keyword">return</span> ((f==<span class="hljs-number">1</span>)?x:-x);&#125;
 
 <span class="hljs-keyword">int</span> n,ATK;
 <span class="hljs-keyword">int</span> a[N],lf[N],tp[N];
 <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">segtree</span> // 线段树，区间加，区间求活人和，单点死人
-{</span>
+&#123;</span>
 <span class="hljs-keyword">int</span> s[N&lt;&lt;<span class="hljs-number">2</span>],sz[N&lt;&lt;<span class="hljs-number">2</span>]; <span class="hljs-keyword">int</span> ad[N&lt;&lt;<span class="hljs-number">2</span>];
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span> </span>{FK(s); FK(sz); FK(ad);}
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span> </span>&#123;FK(s); FK(sz); FK(ad);&#125;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ls ix&lt;&lt;1</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rs ix&lt;&lt;1|1</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> lson ls,L,mid</span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rson rs,mid+1,R</span>
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">up</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ix)</span>
-</span>{
+</span>&#123;
     s[ix]=s[ls]+s[rs];
     sz[ix]=sz[ls]+sz[rs];
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">build</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ix=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> L=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> R=n)</span>
-</span>{
+</span>&#123;
     ad[ix]=<span class="hljs-number">0</span>;
     <span class="hljs-keyword">if</span> (L==R)
-    {
+    &#123;
         sz[ix]=<span class="hljs-number">1</span>;
         s[ix]=a[L];
         <span class="hljs-keyword">return</span>;
-    }
+    &#125;
     <span class="hljs-keyword">int</span> mid=(L+R)&gt;&gt;<span class="hljs-number">1</span>;
     build(ls,L,mid); build(rs,mid+<span class="hljs-number">1</span>,R); 
     up(ix);
     assert(sz[ix]==R-L+<span class="hljs-number">1</span>);
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addone</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> ix)</span>
-</span>{
+</span>&#123;
     s[ix]+=x*sz[ix];
     ad[ix]+=x;
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">down</span><span class="hljs-params">(<span class="hljs-keyword">int</span> ix)</span>
-</span>{
+</span>&#123;
     <span class="hljs-keyword">if</span> (ad[ix])
-    {
+    &#123;
         addone(ad[ix],ls);
         addone(ad[ix],rs);
         ad[ix]=<span class="hljs-number">0</span>;
-    }
-}
+    &#125;
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> x,<span class="hljs-keyword">int</span> ix=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> L=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> R=n)</span>
-</span>{
+</span>&#123;
     <span class="hljs-keyword">if</span> (l&gt;R <span class="hljs-keyword">or</span> L&gt;r <span class="hljs-keyword">or</span> l&gt;r) <span class="hljs-keyword">return</span>;
     <span class="hljs-keyword">if</span> (l&lt;=L <span class="hljs-keyword">and</span> R&lt;=r) <span class="hljs-keyword">return</span> addone(x,ix);
     <span class="hljs-keyword">int</span> mid=(L+R)&gt;&gt;<span class="hljs-number">1</span>;
     down(ix);
     add(l,r,x,lson),add(l,r,x,rson);
     up(ix);
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">set_dead</span><span class="hljs-params">(<span class="hljs-keyword">int</span> pos,<span class="hljs-keyword">int</span> ix=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> L=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> R=n)</span>
-</span>{
-    <span class="hljs-keyword">if</span> (L==R) {sz[ix]=<span class="hljs-number">0</span>; s[ix]=<span class="hljs-number">0</span>; <span class="hljs-keyword">return</span>;}
+</span>&#123;
+    <span class="hljs-keyword">if</span> (L==R) &#123;sz[ix]=<span class="hljs-number">0</span>; s[ix]=<span class="hljs-number">0</span>; <span class="hljs-keyword">return</span>;&#125;
     <span class="hljs-keyword">int</span> mid=(L+R)&gt;&gt;<span class="hljs-number">1</span>;
     down(ix);
     <span class="hljs-keyword">if</span> (pos&lt;=mid) set_dead(pos,lson);
     <span class="hljs-keyword">else</span>          set_dead(pos,rson);
     up(ix);
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">int</span>  <span class="hljs-title">qsum</span><span class="hljs-params">(<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r,<span class="hljs-keyword">int</span> ix=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> L=<span class="hljs-number">1</span>,<span class="hljs-keyword">int</span> R=n)</span>
-</span>{
+</span>&#123;
     <span class="hljs-keyword">if</span> (l&lt;=L <span class="hljs-keyword">and</span> R&lt;=r) <span class="hljs-keyword">return</span> s[ix];
     <span class="hljs-keyword">int</span> mid=(L+R)&gt;&gt;<span class="hljs-number">1</span>;
     down(ix);
     <span class="hljs-keyword">if</span> (r&lt;=mid) <span class="hljs-keyword">return</span> qsum(l,r,lson);
     <span class="hljs-keyword">if</span> (mid&lt;l)  <span class="hljs-keyword">return</span> qsum(l,r,rson);
     <span class="hljs-keyword">return</span> qsum(l,r,lson)+qsum(l,r,rson);
-}
-}T;
+&#125;
+&#125;T;
 <span class="hljs-keyword">int</span> ans=<span class="hljs-number">0</span>;
 <span class="hljs-keyword">namespace</span> moni <span class="hljs-comment">// 暴力模拟</span>
-{
+&#123;
     <span class="hljs-keyword">int</span> buff=<span class="hljs-number">0</span>,add=<span class="hljs-number">0</span>,adds[N];
     <span class="hljs-comment">// buff: 不受翻倍影响的增益</span>
     <span class="hljs-comment">// add: 受翻倍影响的增益</span>
     <span class="hljs-comment">// adds: 已经处理过的add，为了不重复贡献，我们会把它减去</span>
-    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span> </span>{FK(adds); add=buff=<span class="hljs-number">0</span>;}
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span> </span>&#123;FK(adds); add=buff=<span class="hljs-number">0</span>;&#125;
     <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">moni</span><span class="hljs-params">()</span>
-    </span>{
+    </span>&#123;
         <span class="hljs-keyword">auto</span> dead=[&amp;](<span class="hljs-keyword">int</span> i)
-        {
+        &#123;
             <span class="hljs-keyword">if</span> ((tp[i]&amp;<span class="hljs-number">2</span>)==<span class="hljs-number">2</span>) buff-=<span class="hljs-number">2</span>;
             <span class="hljs-keyword">if</span> ((tp[i]&amp;<span class="hljs-number">4</span>)==<span class="hljs-number">4</span>) add+=<span class="hljs-number">2</span>;
-        };
+        &#125;;
         <span class="hljs-keyword">int</span> tmp=<span class="hljs-number">0</span>;
         F(i,<span class="hljs-number">1</span>,n) <span class="hljs-keyword">if</span> (lf[i]&gt;<span class="hljs-number">0</span>)
-        {
+        &#123;
             a[i]=a[i]+add-adds[i]; adds[i]=add;
             <span class="hljs-keyword">if</span> ((tp[i]&amp;<span class="hljs-number">1</span>)==<span class="hljs-number">1</span>)
-            {
+            &#123;
                 lf[i]&gt;&gt;=<span class="hljs-number">1</span>; a[i]&lt;&lt;=<span class="hljs-number">1</span>;
-                <span class="hljs-keyword">if</span> (lf[i]&lt;=<span class="hljs-number">0</span>) {dead(i); <span class="hljs-keyword">continue</span>;}
-            }
+                <span class="hljs-keyword">if</span> (lf[i]&lt;=<span class="hljs-number">0</span>) &#123;dead(i); <span class="hljs-keyword">continue</span>;&#125;
+            &#125;
             tmp+=(a[i]+buff); lf[i]-=ATK;
             <span class="hljs-keyword">if</span> (lf[i]&lt;=<span class="hljs-number">0</span>) dead(i);
-        }
+        &#125;
         ans+=tmp; <span class="hljs-keyword">return</span> tmp;
-    }
+    &#125;
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">sakuya</span><span class="hljs-params">()</span>
-    </span>{
+    </span>&#123;
         F(i,<span class="hljs-number">1</span>,n) <span class="hljs-keyword">if</span> ((tp[i]&amp;<span class="hljs-number">2</span>)==<span class="hljs-number">2</span>) buff+=<span class="hljs-number">2</span>;
         F(_,<span class="hljs-number">1</span>,<span class="hljs-number">20</span>) moni();
         F(i,<span class="hljs-number">1</span>,n) a[i]=a[i]+add-adds[i],adds[i]=add; <span class="hljs-comment">// 做完之后加上</span>
-    }
+    &#125;
     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">change</span><span class="hljs-params">()</span>
-    </span>{
+    </span>&#123;
         F(i,<span class="hljs-number">1</span>,n) <span class="hljs-keyword">if</span> (lf[i]&gt;<span class="hljs-number">0</span>) a[i]+=buff; <span class="hljs-comment">// 由于不受翻倍影响，buff和add等价了，也加上去</span>
-    }
-}
+    &#125;
+&#125;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pii pair<span class="hljs-meta-string">&lt;int,int&gt;</span></span>
 <span class="hljs-built_in">vector</span>&lt;pii&gt; vec;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clear</span><span class="hljs-params">()</span>
-</span>{
+</span>&#123;
     vec.clear(); ans=<span class="hljs-number">0</span>;
     T.clear(); moni::clear();
     FK(a); FK(lf); FK(tp);
-}
+&#125;
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">flandre</span><span class="hljs-params">()</span>
-</span>{
+</span>&#123;
     clear();
     n=I(); ATK=I();
     F(i,<span class="hljs-number">1</span>,n) a[i]=I(),lf[i]=I(),tp[i]=I();
 
     <span class="hljs-keyword">if</span> (ATK==<span class="hljs-number">0</span>) <span class="hljs-comment">// 特殊处理</span>
-    {
+    &#123;
         <span class="hljs-keyword">bool</span> no_die=<span class="hljs-number">0</span>,add=<span class="hljs-number">0</span>;
         F(i,<span class="hljs-number">1</span>,n)
-        {
+        &#123;
             <span class="hljs-keyword">if</span> (tp[i]&amp;<span class="hljs-number">1</span>) add|=((tp[i]&amp;<span class="hljs-number">4</span>)==<span class="hljs-number">4</span>);
             <span class="hljs-keyword">else</span>
-            {
+            &#123;
                 add|=((tp[i]&amp;<span class="hljs-number">2</span>)==<span class="hljs-number">2</span>); no_die=<span class="hljs-number">1</span>;
                 <span class="hljs-keyword">if</span> (a[i]&gt;<span class="hljs-number">0</span>)
-                {
+                &#123;
                     <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;defeat&quot;</span>);
                     <span class="hljs-keyword">return</span>;
-                }
-            }
-        }
+                &#125;
+            &#125;
+        &#125;
         <span class="hljs-keyword">if</span> (add <span class="hljs-keyword">and</span> no_die)
-        {
+        &#123;
             <span class="hljs-built_in">puts</span>(<span class="hljs-string">&quot;defeat&quot;</span>);
             <span class="hljs-keyword">return</span>;
-        }
-    }
+        &#125;
+    &#125;
 
     moni::sakuya();
 
-    {
+    &#123;
         <span class="hljs-keyword">int</span> nn=<span class="hljs-number">0</span>;
         F(i,<span class="hljs-number">1</span>,n) <span class="hljs-keyword">if</span> (lf[i]&gt;<span class="hljs-number">0</span>)
-        {
+        &#123;
             ++nn;
             a[nn]=a[i];
             lf[nn]=lf[i]; tp[nn]=tp[i];
-        }
+        &#125;
         F(i,nn+<span class="hljs-number">1</span>,n) a[i]=lf[i]=tp[i]=<span class="hljs-number">0</span>;
         n=nn;
         <span class="hljs-keyword">if</span> (!n <span class="hljs-keyword">or</span> !ATK)
-        {
+        &#123;
             <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,ans);
             <span class="hljs-keyword">return</span>;
-        }
-    } <span class="hljs-comment">// 删去死人，并讨论ATK==0的另一种情况，就是人活着，但是不再打出更多伤害</span>
+        &#125;
+    &#125; <span class="hljs-comment">// 删去死人，并讨论ATK==0的另一种情况，就是人活着，但是不再打出更多伤害</span>
     <span class="hljs-comment">// “有的人活着，但它已经死了”</span>
     moni::change();
     F(i,<span class="hljs-number">1</span>,n) lf[i]=(lf[i]+ATK<span class="hljs-number">-1</span>)/ATK; ATK=<span class="hljs-number">1</span>;
@@ -227,35 +314,111 @@
     T.build();
     <span class="hljs-keyword">int</span> las_id=<span class="hljs-number">1</span>,las_tm=<span class="hljs-number">1</span>;
     <span class="hljs-keyword">for</span>(<span class="hljs-keyword">auto</span> it:vec)
-    {
+    &#123;
         <span class="hljs-keyword">int</span> tm,id; tie(tm,id)=it;
         <span class="hljs-keyword">if</span> (id&lt;las_id) <span class="hljs-comment">// 转一圈回来</span>
-        {
+        &#123;
             ans+=T.qsum(las_id,n); 
             ++las_tm; las_id=<span class="hljs-number">1</span>;
-        }
+        &#125;
         <span class="hljs-keyword">if</span> (las_id&lt;=id) <span class="hljs-comment">// 直接过来</span>
-        {
+        &#123;
             ans+=T.qsum(las_id,id);
             las_id=id;
-        }
+        &#125;
         ans+=T.qsum(<span class="hljs-number">1</span>,n)*(tm-las_tm); las_tm=tm;
         T.set_dead(id);
         <span class="hljs-keyword">int</span> d=<span class="hljs-number">0</span>;
         <span class="hljs-keyword">if</span> ((tp[id]&amp;<span class="hljs-number">2</span>)==<span class="hljs-number">2</span>) d-=<span class="hljs-number">2</span>;
         <span class="hljs-keyword">if</span> ((tp[id]&amp;<span class="hljs-number">4</span>)==<span class="hljs-number">4</span>) d+=<span class="hljs-number">2</span>;
         T.add(<span class="hljs-number">1</span>,n,d);
-    }
+    &#125;
     <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%lld\n&quot;</span>,ans);
-}
+&#125;
 <span class="hljs-meta">#<span class="hljs-meta-keyword">undef</span> int</span>
 <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
-</span>{
+</span>&#123;
     <span class="hljs-keyword">int</span> _=I();
     F(i,<span class="hljs-number">1</span>,_) flandre();
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
+&#125;
 </div></code></pre>
 
     </body>
     </html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/contests/NOIP-Cl-6-src/C.html" data-id="ckzy4tl5x002v9gunf3675bym" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

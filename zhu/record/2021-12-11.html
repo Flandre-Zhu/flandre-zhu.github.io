@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.12.11周五摸鱼了一天。其实今天上午也摸了相当多的鱼，后面才开始写做OI的。并且没咋搞whk。 按道理这样的一天3个题没问题吧，但是我只搞了一个题。傻逼。 CF1278F换个名字，假设有 $n$ 个数排列，随机 $m$ 次。 那么每次抽到大王的概率其实是 $p&#x3D;\dfrac{1}{n}$。设 $x$ 表示抽到的次数，要求 $E(x^k)$ 先斯特林反演，变成 $\sum\limits_">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-11.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.12.11周五摸鱼了一天。其实今天上午也摸了相当多的鱼，后面才开始写做OI的。并且没咋搞whk。 按道理这样的一天3个题没问题吧，但是我只搞了一个题。傻逼。 CF1278F换个名字，假设有 $n$ 个数排列，随机 $m$ 次。 那么每次抽到大王的概率其实是 $p&#x3D;\dfrac{1}{n}$。设 $x$ 表示抽到的次数，要求 $E(x^k)$ 先斯特林反演，变成 $\sum\limits_">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:42.965Z">
+<meta property="article:modified_time" content="2021-12-14T05:46:10.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-11.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:42.965Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-12-11"><a href="#2021-12-11" class="headerlink" title="2021.12.11"></a>2021.12.11</h1><p>周五摸鱼了一天。其实今天上午也摸了相当多的鱼，后面才开始写做OI的。并且没咋搞whk。</p>
+<p>按道理这样的一天3个题没问题吧，但是我只搞了一个题。傻逼。</p>
+<h2 id="CF1278F"><a href="#CF1278F" class="headerlink" title="CF1278F"></a>CF1278F</h2><p>换个名字，假设有 $n$ 个数排列，随机 $m$ 次。</p>
+<p>那么每次抽到大王的概率其实是 $p=\dfrac{1}{n}$。设 $x$ 表示抽到的次数，要求 $E(x^k)$</p>
+<p>先斯特林反演，变成 $\sum\limits_{j=1}^{j} {k\brace j} j! E(\binom{x}{j})$。问题变成对于每个 $j$，求 $E(\binom{x}{j})$</p>
+<p>然后 $P(i)$ 表示 $x=i$ 的概率。注意到它就是 $\binom{m}{i} p^i\times (1-p)^{m-i}$。把期望拆成一堆概率，然后化式子：</p>
+<script type="math/tex; mode=display">
+E(\binom{x}{j})=\sum\limits_{x=j}^{m} \binom{m}{x}\times p^x\times (1-p)^{m-x} \binom{x}{j}\\</script><p>我们发现了一个 $\binom{m}{x}$ 和一个 $\binom{x}{j}$。联想到这个式子：</p>
+<blockquote>
+<p>$\binom{n}{m}\binom{m}{k}=\binom{n}{k}\binom{n-k}{m-k}$</p>
+</blockquote>
+<p>因此我们考虑把 $\binom{m}{j}$ 提到前面作为常数，后面写一个和 $m-j$ 有关的二项式定理的形式。</p>
+<script type="math/tex; mode=display">
+=\sum\limits_{x=j}^{m} \binom{m}{x}\binom{x}{j} \times p^x (1-p)^{m-x}\\
+=\sum\limits_{x=j}^{m} \binom{m}{j}\binom{m-j}{x-j} \times p^x (1-p)^{m-x}\\
+=\binom{m}{j} \sum\limits_{x=j}^{m} \binom{m-j}{x-j} \times p^x (1-p)^{m-x}\\
+=\binom{m}{j} \sum\limits_{x=0}^{m-j} \binom{m-j}{x} \times p^{x+j} (1-p)^{m-j-x}\\
+=\binom{m}{j} p^j \sum\limits_{x=0}^{m-j} \binom{m-j}{x} \times p^x (1-p)^{m-j-x}\\
+=\binom{m}{j} p^j (p+1-p)^{m-j}\\
+=\binom{m}{j} p^j\\</script><p>因此答案为</p>
+<script type="math/tex; mode=display">
+\sum\limits_{j=1}^{k} {k\brace j}j! \binom{m}{j} p^j</script><p>处理一行的斯特林数。可以做到 $O(k^2)/O(k\log k)$。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-11.html" data-id="ckzy4tl2e001c9gunfrur4vjj" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

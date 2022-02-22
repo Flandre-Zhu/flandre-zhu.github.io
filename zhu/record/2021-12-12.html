@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.12.12下午和家人过生日了。按道理明天才是我生日，但是我周一没有空，所以才今天过生日。 写题: CF1313E这题从昨天晚上想到了今天，改了几个做法过去。 首先肯定是枚举 $s$ 中的断点 $p$，接下来我们需要在 $t_1$ 中寻找 $s[1,p]$，在 $t_2$ 中寻找 $s[p+1,n]$。 然后一个很直观的思路是，我们暴力维护匹配位置，然后数相交的区间数即可。 两个区间相交，">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-12.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.12.12下午和家人过生日了。按道理明天才是我生日，但是我周一没有空，所以才今天过生日。 写题: CF1313E这题从昨天晚上想到了今天，改了几个做法过去。 首先肯定是枚举 $s$ 中的断点 $p$，接下来我们需要在 $t_1$ 中寻找 $s[1,p]$，在 $t_2$ 中寻找 $s[p+1,n]$。 然后一个很直观的思路是，我们暴力维护匹配位置，然后数相交的区间数即可。 两个区间相交，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://codeforces.ml/contest/1313/submission/138827760">
+<meta property="article:published_time" content="2022-02-20T06:09:43.055Z">
+<meta property="article:modified_time" content="2021-12-14T05:21:56.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://codeforces.ml/contest/1313/submission/138827760">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-12.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:43.055Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-12-12"><a href="#2021-12-12" class="headerlink" title="2021.12.12"></a>2021.12.12</h1><p>下午和家人过生日了。按道理明天才是我生日，但是我周一没有空，所以才今天过生日。</p>
+<h2 id="写题-CF1313E"><a href="#写题-CF1313E" class="headerlink" title="写题: CF1313E"></a>写题: CF1313E</h2><p>这题从昨天晚上想到了今天，改了几个做法过去。</p>
+<p>首先肯定是枚举 $s$ 中的断点 $p$，接下来我们需要在 $t_1$ 中寻找 $s[1,p]$，在 $t_2$ 中寻找 $s[p+1,n]$。</p>
+<p>然后一个很直观的思路是，我们暴力维护匹配位置，然后数相交的区间数即可。</p>
+<p>两个区间相交，设第一个区间为 $[l_1,r_1]$，第二个为 $[l_2,r_2]$，则一定满足 $l_1\le r_2$，否则不可能相交。</p>
+<p>两个区间的长度和为 $n$，这是我们所保证的。容易发现，让 $r_2-l_1+1&lt;n$ 的时候，一定会有交，否则一定不会有交。</p>
+<blockquote>
+<p>怎么想到：考虑临界情况，刚好没交的时候，恰好一人一半，此时有 $r_2-l_1+1=n$。然后如果中间的空隙小，更加排不开两个区间，则一定会有交，因此是 $r_2-l_1+1&lt;n$ 的时候区间有交。</p>
+</blockquote>
+<p>那么如果我们能维护 $l_1,r_2$ 的集合 $P,Q$，那么用两个树状数组就可以维护出当前 $r_2-l_1+1&lt;n$ 的数量了。仅支持加入/删除单个元素。就维护一下贡献，很好搞。</p>
+<p>注意到 $l_1,r_2$ 没啥本质区别，可以reverse转换。因此考虑做 $l_1$，维护它的集合。</p>
+<p>随着 $p$ 的增加，$s[1,p]$ 会不断往后面加一个字符。那么每次的集合都是上一次的子集。如果能够找到 <strong>恰好</strong> 需要删哪些位置，维护集合的均摊复杂度就是 $O(n)$ 的了。</p>
+<blockquote>
+<p>在这里，我一开始还想了个SAM做法，非常的sb</p>
+</blockquote>
+<p>某个位置 $i$ 需要在枚举到长度为 $p$ 时被删掉，那说明 $t_1[i,m]$ 与 $s$ 的 LCP 长度为 $p-1$。也就是说我们可以通过 LCP 长度来判断每次需要删哪些东西。</p>
+<p>那就好做了，跑个exkmp （z函数），然后开一堆vector记一下就可以了。</p>
+<p><img src="https://codeforces.ml/contest/1313/submission/138827760" alt="代码"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-12.html" data-id="ckzy4tl2f001d9gun4jzsgh6o" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1217-1219 hb训练 写题 ABC155F CF1617E ABC176F CF1007E   比赛: 省选模拟 A. 矩阵 B. 序列 C. 树 总结      1217-1219 hb训练写题4个，ABC155F, CF1617E, ABC176F, CF1007E ABC155F区间操作不方便，转换成差分序列上两点操作。 同 这里 的 Codeforces 79D 把这两个点连一条">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-17~19.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1217-1219 hb训练 写题 ABC155F CF1617E ABC176F CF1007E   比赛: 省选模拟 A. 矩阵 B. 序列 C. 树 总结      1217-1219 hb训练写题4个，ABC155F, CF1617E, ABC176F, CF1007E ABC155F区间操作不方便，转换成差分序列上两点操作。 同 这里 的 Codeforces 79D 把这两个点连一条">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:43.343Z">
+<meta property="article:modified_time" content="2021-12-22T12:46:14.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-17~19.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:43.343Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><a href="#1217-1219-hb训练">1217-1219 hb训练</a><ol>
+<li><a href="#写题">写题</a><ol>
+<li><a href="#abc155f">ABC155F</a></li>
+<li><a href="#cf1617e">CF1617E</a></li>
+<li><a href="#abc176f">ABC176F</a></li>
+<li><a href="#cf1007e">CF1007E</a></li>
+</ol>
+</li>
+<li><a href="#比赛-省选模拟">比赛: 省选模拟</a><ol>
+<li><a href="#a-矩阵">A. 矩阵</a></li>
+<li><a href="#b-序列">B. 序列</a></li>
+<li><a href="#c-树">C. 树</a></li>
+<li><a href="#总结">总结</a></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="1217-1219-hb训练"><a href="#1217-1219-hb训练" class="headerlink" title="1217-1219 hb训练"></a>1217-1219 hb训练</h1><h2 id="写题"><a href="#写题" class="headerlink" title="写题"></a>写题</h2><p>4个，ABC155F, CF1617E, ABC176F, CF1007E</p>
+<h3 id="ABC155F"><a href="#ABC155F" class="headerlink" title="ABC155F"></a>ABC155F</h3><p>区间操作不方便，转换成差分序列上两点操作。</p>
+<p>同 <a href="https://flandre-zhu.github.io/zhu/record/2021-12-03~07.html">这里</a> 的 Codeforces 79D</p>
+<p>把这两个点连一条边。接下来变成，有一张图，点权有0/1。每条边可以对它连接的两个点都取反，也可以选择什么都不干。要使得点权都为0。问是否可行，不要求操作次数最小。</p>
+<p>分连通块考虑。对于一个连通块，如果操作的边形成了环，那就相当于啥也没干，删掉一个环。因此我们操作的边一定可以是无环的。也就是任取一个生成树做一下。树很simple，从下往上贪心的做即可。最后判断根是否为 0/1 即可。</p>
+<p>代码很简单。</p>
+<h3 id="CF1617E"><a href="#CF1617E" class="headerlink" title="CF1617E"></a>CF1617E</h3><p>一个观察是，对于一个数 $x$，取最小的 $k$ 使得 $2^k\ge x$ 即可。</p>
+<p>如果每次都取一个最小的 $k$ 使得 $2^k\ge x$，那么很显然，$x$ 原来的最高位会变成 $0$。也就是 $x$ 的最高非0位在不断的变低。那很明显经过 $\log x$ 次，$x$ 就会变成 $0$。</p>
+<p>我们把这个过程看成一条路径，并建图。一定建出来是树 （因为不断变小）。</p>
+<p>然后问题就变成树上有若干关键点，求距离最远的一对的距离。类似直径，两遍dfs即可。</p>
+<p>$x$ 可能很大，需要给点进行一个重标号。它和离散化的区别是它不需要考虑相对大小，因此比离散化好写。</p>
+<h3 id="ABC176F"><a href="#ABC176F" class="headerlink" title="ABC176F"></a>ABC176F</h3><p>这是个热身dp题，对于后面的毒瘤dp题1007E来说，相当于热身了一波。</p>
+<p>每次五选三，相当于留下两个。</p>
+<p>我们先设计一个dp：做到 $i$，留下的两个是 $x,y$，最大得多少分。$i$ 每次增加 $3$ 个转移。</p>
+<p>如果记位置，我们需要一个很大力的讨论三个是否是相同的，如何如何转移。复杂度大概是 $10O(n^3)$，这个 $10$ 是从 ${x,y,i+1,i+2,i+3}$ 中取两个的枚举复杂度。而且这个形式一看就没法优化，没有前途。</p>
+<p>最关键的是这个做法没有利用到值域是 $[1,n]$。</p>
+<p>考虑记录值。即，$f(i,x,y)$ 表示做到 $i$，剩下的两个值是 $x,y$，最大的得分。</p>
+<p>依然是每次跳 $3$ 个。设 $i+1,i+2,i+3$ 的值分别是 $a,b,c$。考虑转移：</p>
+<ul>
+<li>到 $f(i+3,a,b)$。$f(i)$ 剩下了不知道啥，和 $c$ 组一组。我们假设它没有贡献相等。直接令 $f(i,<em>,</em>)_{\max} \to f(i+3,a,b)$。这里需要维护一个全局最大值。</li>
+<li>到 $f(i+3,a,b)$。$f(i)$ 剩下了两个 $c$，和 $c$ 凑一组，得一分。$f(i,c,c)\to f(i+3,a,b)$</li>
+<li>到 $f(i+3,a,x)$。$f(i)$ 剩下了 $x,y$，$y$ 和 $b,c$ 凑一组。$f(i,x,*)_{\max} \to f(i+3,a,x)$。这里需要维护一个某行/列最大值。</li>
+<li>上一种转移，如果 $b=c$ 且 $y=b$，那么可以得一分。转移：$f(i,x,b)+1 \to f(i+3,a,x)$</li>
+</ul>
+<p>另外还有一些对称的情况，省略。总结一下，我们需要：</p>
+<ul>
+<li>单点访问</li>
+<li>维护某行/某列的最大值</li>
+<li>维护全局最大值</li>
+</ul>
+<p>都可以 $O(1)$ 的修改并维护。并且第一维 $i$ 可以用原地修改来优化掉空间。复杂度是 $O(n^3)$。</p>
+<p>细节：转移的时候，需要用vector先记录所有的转移，到最后一并转移，并维护全局最大值和行列最大值。</p>
+<h3 id="CF1007E"><a href="#CF1007E" class="headerlink" title="CF1007E"></a>CF1007E</h3><p>一个很 <strong>难</strong> 的dp题。</p>
+<p>本题解（大）部分参考了 <a target="_blank" rel="noopener" href="https://yhx-12243.github.io/OI-transit/records/cf1007E.html">yhx 的题解</a></p>
+<p>先做一会，发现我们似乎要把每个站的人数记录在状态里。这根本没法记。</p>
+<p>但是想一想发现好像也没别的转移。那怎么办。</p>
+<p>本题的突破口在于，我们强制令每次都 <strong>恰好</strong> 接走 $K$ 个人。</p>
+<p>但这样不一定可行，因为总人数不一定是 $K$ 的倍数。我们在 $n+1$ 位置放一个 (INF,0,INF) 的点，作为“缓冲”，并且最后我们不管它。这样，我们每次恰好接 $K$ 个，也是能够有解的。</p>
+<p>那么我们接下来的dp都要依着 <strong>恰好</strong> 接走 $K$ 个人。不要怀疑它的正确性，它一定有解。</p>
+<p>然后考虑dp。设 $f(i,j)$ 表示，前 $i$ 个站，坚持 $j$ 轮，最少几个车。</p>
+<blockquote>
+<p>这个应该说是一开始就能设出来的，只不过不知道如何转移</p>
+</blockquote>
+<p>如果前面的车都没有碰到过 $i$ 车站的人，那么 $f(i,j)\leftarrow f(i-1,j)$。需满足：$a_i+jb_i\le c_i$。</p>
+<p>如果有碰到过的，设最后一次在第 $r$ 轮。那么在第 $r$ 轮的时候，$[1,i-1]$ 应该是空的。我们有必要知道这里用了多少步。因此设 $g(i,j)$ 表示前 $i$ 个车站到第 $j$ 轮清空最少需要多少车。</p>
+<blockquote>
+<p>这一步考虑是进一步向前的关键，当然，它是基于上一个转化的。</p>
+<p>转化加上这一步，整个问题才能继续往下做。</p>
+</blockquote>
+<p>假设我们设了这个 $g$，考虑 $f$ 的转移。首先加上 $g(i,r)$，然后把 $i$ 的 “潜在威胁” 清空。接下来，$i$ 就不用管了，需要做一下 $[1,i-1]$。这其实是子问题，但一个区别是它们的初始值是 $0$ 而不是 $a_i$。这个好做，在 $f$ 后记一维 $0/1$ 表示初始值为 $0/a_i$ 的情况。</p>
+<p>重新来一遍。</p>
+<ol>
+<li>如果前面的车都没有到 $i$。<ul>
+<li>满足 $a_i+jb_i\le c_i$ 且 $f(i-1,j)&lt;INF$，更新 $f(i-1,j)\to f(i,j)$</li>
+<li>令 $N=\sum\limits<em>{x&lt;i} a_x+jb_x,N’=\sum\limits</em>{x\le i} a_x+jb_x$。若 $K\lceil\frac{N}{K}\rceil \le N’$，更新 $g(i,j)=\lceil\dfrac{N}{K}\rceil$</li>
+<li>这里的转移，最后一维 $0/1$ 不动</li>
+</ul>
+</li>
+<li>最后一次接到 $i$ 在 $r$ 时刻，$r$ 枚举。设后面那一维 $0/1$ 是 $k$，注意与 $K$ 区分<ul>
+<li>首先需要 $g(i,r,k)$ 个车，清空</li>
+<li>第 $i$ 个位置剩：$rem=(\sum\limits_{x\le i} ka_x+rb_x)-Kg(i,r)$</li>
+<li>第 $i$ 个位置会变成 $rem+b_i(j-r)$，可能超过 $c_i$。这部分需要清掉。</li>
+<li>需要 $need=\lceil \dfrac{rem+b_i(j-r)-c_i}{K} \rceil$ 步解决这个，但要满足 $K*need\le rem$</li>
+<li>若满足，更新 $g(i,r)+need+f(i-1,j-r,0) \to f(i,j,k)$</li>
+<li>$g$ 差不多。设 $N=\sum\limits<em>{x&lt;i} (j-r)b_x$，$N’=N=\sum\limits</em>{x\le i} (j-r)b_x$。</li>
+<li>需满足 $K\lceil\dfrac{N}{K}\rceil \le N’$，更新 $g(i,r)+need+\lceil\dfrac{N}{K}\rceil \to g(i,j,k)$</li>
+</ul>
+</li>
+</ol>
+<p>这里每个 “需满足…”，多数就是要注意，我们必须 <strong>恰好</strong> 每次接走 $K$ 个。</p>
+<p>然后注意细节写出来就可以了。需要开 long long。</p>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/contest/1007/submission/139985644">代码</a></p>
+<h2 id="比赛-省选模拟"><a href="#比赛-省选模拟" class="headerlink" title="比赛: 省选模拟"></a>比赛: 省选模拟</h2><p>周六，号爸举行了一场省选模拟赛。</p>
+<p>我应获得160分(rk 5)。但是我文件名写错了，喜提0分。</p>
+<p>赛场: 20+100+40</p>
+<p>赛后: 补完</p>
+<h3 id="A-矩阵"><a href="#A-矩阵" class="headerlink" title="A. 矩阵"></a>A. 矩阵</h3><p>原题是 NOIP2017 列队，但这题卡常。只有树状数组和常数很小的平衡树能过。</p>
+<p>考虑每一行维护前 $m-1$ 个，并单独维护最后一列。</p>
+<p>对于循环位移，我们相当于要删除一个数，并插入在最后面。插入在最后面，可以直接接在序列的最后面。删除一个数，可以直接在这里标记一个删除。每次查找第 $k$ 个的时候，就找第 $k$ 个没被删除标记的位置即可。这个可以用线段树二分，平衡树二分，树状数组二分等二分来实现。</p>
+<p>但是这样我们需要 $n+1$ 个树状数组/平衡树/线段树。线段树或平衡树可以用动态开点AC，但是树状数组不太好动态开点。</p>
+<p>我们发现位置与值是分开的。也就是说，我们每次操作都是先找一个位置，然后取这个位置的值，再做后续的操作。</p>
+<p>考虑离线。我们开一个树状数组，先把每次操作要用到的位置搞出来，然后后面再把值填进去。关于值的维护，我们注意到，设每行后面新接的数为 “额外空间”。那么额外空间的总量是 $O(q)$ 的，直接开数组即可。</p>
+<p>对于不是额外空间的位置，可以用 $(x-1)m+y$ 来计算这个位置的值。</p>
+<p>然后模拟一遍就行了。 <a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/6wc2BRxPdt/">代码</a></p>
+<h3 id="B-序列"><a href="#B-序列" class="headerlink" title="B. 序列"></a>B. 序列</h3><p>原题是 CTSC2009 序列变换</p>
+<p>在 <a href="https://flandre-zhu.github.io/zhu/methods/misc-tricks.html">这里</a> 第一个trick</p>
+<h3 id="C-树"><a href="#C-树" class="headerlink" title="C. 树"></a>C. 树</h3><p>和上题一样，是个slope-trick</p>
+<p>这里讲一下slope-trick如果斜率差不是1，怎么维护。</p>
+<p>很简单，开一个map，map的first表示断点位置，second表示斜率的差，然后记录一下左右斜率，就行了。</p>
+<p>然后这个东西是支持启发式合并的。</p>
+<p>本题就是维护一个凸壳，每个位置的凸壳是儿子凸壳的和，然后拿它和父亲那条边的 $w$，来切这个凸包。左边用 $-w$ 来切，右边用 $w$ 来切。这个切凸包的意思是，如果我要对子树整体 $+1$，那么我可以选择动这个 $w$，也可以选择递归到每个子树里去 $+1$。但是直接动 $w$ 可能更优，要取 $\min$。然后发现这个取 $\min$ 其实就是拿斜率为 $-w,w$ 的线去切凸包。</p>
+<p>这个好做，就是像单调队列一样左右看一下就行了，不行就弹掉。</p>
+<p>然后就启发式合并一遍，得到最终的最优解，再倒推回去，得到每条边选了啥，算一遍就可以得到总代价了。细节较多，需要自己推很多东西。这里略。</p>
+<p><a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/TZwJjXyQs2/">代码</a></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>学会了更加广义的slope-trick维护！</p>
+<p>NOIP2017列队那个题我是做过的，但是我忘记做法了。</p>
+<p>写这篇文章是12.22，这天我也发现我做过的一个题我忘记怎么做了。</p>
+<p>因此我觉得我很有必要重温一下我做过的题。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-17~19.html" data-id="ckzy4tl2g001g9gun2ao1523x" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

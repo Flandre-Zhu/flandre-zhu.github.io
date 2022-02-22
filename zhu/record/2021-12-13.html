@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="2021.12.13今天是南京大屠杀公祭日，让我们缅怀逝去的三十万同胞。 同时，今天是垃圾zps的生日。 做题: CSES1752 Creating OfficesObservation : 最深的一个点一定选 证: trivial 考虑一个做法：从深到浅枚举点，判断是否能选，能选就选。 一个sb实现是对于每个能选的点暴力搜领域，标记为不能选。复杂度 $O(n^2)$。 接下来考虑几个出路：  优">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://flandre-zhu.github.io/zhu/record/2021-12-13.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="2021.12.13今天是南京大屠杀公祭日，让我们缅怀逝去的三十万同胞。 同时，今天是垃圾zps的生日。 做题: CSES1752 Creating OfficesObservation : 最深的一个点一定选 证: trivial 考虑一个做法：从深到浅枚举点，判断是否能选，能选就选。 一个sb实现是对于每个能选的点暴力搜领域，标记为不能选。复杂度 $O(n^2)$。 接下来考虑几个出路：  优">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-20T06:09:43.148Z">
+<meta property="article:modified_time" content="2021-12-14T07:05:56.000Z">
+<meta property="article:author" content="Flandre Zhu">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://flandre-zhu.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/zhu/record/2021-12-13.html" class="article-date">
+  <time class="dt-published" datetime="2022-02-20T06:09:43.148Z" itemprop="datePublished">2022-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="2021-12-13"><a href="#2021-12-13" class="headerlink" title="2021.12.13"></a>2021.12.13</h1><p>今天是南京大屠杀公祭日，让我们缅怀逝去的三十万同胞。</p>
+<p>同时，今天是垃圾zps的生日。</p>
+<h2 id="做题-CSES1752-Creating-Offices"><a href="#做题-CSES1752-Creating-Offices" class="headerlink" title="做题: CSES1752 Creating Offices"></a>做题: CSES1752 Creating Offices</h2><p>Observation : 最深的一个点一定选</p>
+<p>证: trivial</p>
+<p>考虑一个做法：从深到浅枚举点，判断是否能选，能选就选。</p>
+<p>一个sb实现是对于每个能选的点暴力搜领域，标记为不能选。复杂度 $O(n^2)$。</p>
+<p>接下来考虑几个出路：</p>
+<ol>
+<li>优化暴力做到 $O(n\log n)$</li>
+<li>换一个做法，比如dp</li>
+</ol>
+<p>考虑出路1。一种sb实现是用点分树来维护打标记的操作。确实可以！常数巨大，代码难度高。是第二难写的做法。</p>
+<p>最难写的做法是什么捏？用 dp 做，$f(u,k)$ 表示 $u$ 子树里选的点距离 $u$ 都 $\ge k$ 最多选多少个，然后用长链剖分维护这个dp。如果只需要求出点数，这是最简单的做法。但本题要求记录解，就需要可持久化。而且细节非常多。</p>
+<p>考场上想到这，可以选择硬冲点分树。但直接告诉我们应该有更加简单的做法。</p>
+<p>那我们再滚回去考虑出路1。联想到一个类似的问题：树分块的构造。那里我们每次选一个没被标记的点，并标记上它的 $k$ 级祖先。每次有一个点，判断它没被标记到，就看它往上 $d$ 个里面有没有一个带标记的。</p>
+<p>这为啥对？如果有一个带标记的，设这个点为 $L$，被 $u$ 标记到。那么 $L$ 就是 $u,v$ 的 LCA。并且 $L,u$ 与 $L,v$ 距离都不超过 $k$ （由这个构造可知），因此 $u,v$ 的距离不超过 $2k$。树分块是自己构造的，只需要这个距离在 $O(k)$ 内就行。但本题要求是精确的。那咋整呢。</p>
+<p>根据树分块的结论，本题可以一样用。就是说，我们不会选超过 $n/k$ 个点。因此每次可以 $O(k)$ 的做，没关系。</p>
+<p>对于每个选出来的点 $u,v$，我们要求 $dep(u)+dep(v)-2dep(LCA)\ge k$。那么如果要判断当前 $v$ 是否合法，先枚举 $LCA$ (往上数 $k$ 个即可)，然后要求 $dep(u)-2dep(LCA)\ge k-dep(v)$。</p>
+<p>我们只需要求出 $dep(u)-2dep(LCA)$ 的最小值即可。求路径最小值很容易树剖完成。只要能更新出每个位置的 $dep(u)-2dep(LCA)$ 的最小值就行了。</p>
+<p>根据上面选不超过 $n/k$ 个点，每次选一个 $u$ 出来之后，可以 $O(k\log k)$ 的暴力更新它上面 $k$ 个点的权值。</p>
+<p>因此，做法已经有了：按深度枚举点 $u$，看它上面 $k$ 个点权值的最小值，如果 $\ge k-dep(u)$，那么就可以选 $u$。如果选了 $u$，就暴力更新上面 $k$ 个点的权值。</p>
+<p><a target="_blank" rel="noopener" href="https://cses.fi/paste/dfa6f5a826107f853156d3/">代码</a></p>
+<h2 id="生日感言"><a href="#生日感言" class="headerlink" title="生日感言"></a>生日感言</h2><p>发在动态里了。</p>
+<p>时间过太快了，还没反应过来已经15岁了。印象里我还坐在小学的教室里，想着我啥时候上初中，现在都上高一了。</p>
+<p>我的竞赛之路要开始进入燃烧的阶段了。即，将会开始短暂的高潮，并迅速进入尾声。听dyls讲，现在的比赛就是打一场少一场。还真就是这样。等到明年这个时候，我可能就要接受whk的现实了。</p>
+<p>无数的事情等我去做，无数的愿望等待实现，而时间不会等待任何人，只会一个劲往前冲，谁来了也没法改变。但是，我们真的需要想这些吗？想是要想，但不必觉得伤感。任何事情都不是永恒的，都会有消亡的那一天。但正是这种有限性，赋予了事物无穷的意义。如果人永远不会死，那活着也没什么意思。正因为人会死，人才会知道珍惜活着的时间。</p>
+<p>因此，时间的流逝并不是一件悲哀的事情，而是美丽的，充满意义的事情。不需要考虑什么时候会失去，只需要考虑，在我失去之前，怎么把它变得充满意义。活在当下，不去纠结以后会怎么样。明天，可能会降温；明年，我可能会退役；一个世纪后，我大约会死；但至少我现在是快乐的，我有着一堆最棒的朋友，有过独特的人生体验，每一天都活在快乐当中。这样就足够了，就很好了。</p>
+<p>祝可爱猫猫zps生日快乐捏，希望她每天都能像现在这样快乐qwq</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-13.html" data-id="ckzy4tl2f001e9gunb5r79md9" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+
+  
+    
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 Flandre Zhu<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
