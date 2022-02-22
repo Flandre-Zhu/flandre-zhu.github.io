@@ -97,10 +97,10 @@
 <p>我接下来就想着，大概是要抽象出来一个式子，关于 $b_1$。经过一番思考，我把上述递推过程变成了这样：</p>
 <ul>
 <li>设 $f(i)$ 表示对 $i$ 以及其倍数的位置，加上了多少，可以是负的。</li>
-<li>得到递推：$f(i)=b<em>i-(\sum\limits</em>{d|i,d&lt;i} f(d)+a_i)$。后面那一堆是经过操作后 $a_i$ 的实际值，用 $b_i$ 减去即可。</li>
+<li>得到递推：$f(i)=b_i-(\sum\limits_{d|i,d&lt;i} f(d)+a_i)$。后面那一堆是经过操作后 $a_i$ 的实际值，用 $b_i$ 减去即可。</li>
 <li>操作代价就是 $\sum |f(i)|$</li>
 </ul>
-<p>经过这样一波递推之后，我们可以得到每个 $f(i)$ 关于 $b_1$ 的表达式。设 $b_1=x,\ f(i)=kx+b$。</p>
+<p>经过这样一波递推之后，我们可以得到每个 $f(i)$ 关于 $b_1$ 的表达式。设 $b_1=x, f(i)=kx+b$。</p>
 <p>那咱相当于，已知一堆 $kx+b$，给定 $x$，求 $\sum |kx+b|$。这看起来非常的好做啊。</p>
 <p>我们把这些绝对值函数按分界点 （即 $\dfrac{-b}{k}$）排序，每次二分得到一段前缀取正，一段后缀取负。然后就可以快速计算这个数了。</p>
 <p>然后注意细节，就做完了。</p>
@@ -108,7 +108,7 @@
 <h3 id="CF1604F"><a href="#CF1604F" class="headerlink" title="CF1604F"></a>CF1604F</h3><p>限时：50min 超时：15min （看了题解）</p>
 <p>这题我有阴影，因为我在赛场上没做出来。</p>
 <p>我看到这题，肯定先考虑：$c$ 怎么做？</p>
-<p>这是常见套路。一波莫反后，设 $h(x)=\sum\limits<em>{i=1}^{x}\mu(i)(x/i)^2$。那么 $c(l,r)=\sum\limits</em>{i=l}^{r}h(r/i)$。然后就可以 $O(\sqrt{r})$ 的做 $c(l,r)$。</p>
+<p>这是常见套路。一波莫反后，设 $h(x)=\sum\limits_{i=1}^{x}\mu(i)(x/i)^2$。那么 $c(l,r)=\sum\limits_{i=l}^{r}h(r/i)$。然后就可以 $O(\sqrt{r})$ 的做 $c(l,r)$。</p>
 <p>接下来就只能优化dp了。dp有哪些优化办法？</p>
 <ol>
 <li>斜率优化/单调队列优化</li>
@@ -153,7 +153,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-11-15.html" data-id="ckzy4tkxd00129gun4jaj9c3s" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-11-15.html" data-id="ckzy527uz0012ksunhjb80d4d" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -224,5 +224,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>

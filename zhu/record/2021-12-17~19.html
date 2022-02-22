@@ -118,7 +118,7 @@
 <h3 id="ABC176F"><a href="#ABC176F" class="headerlink" title="ABC176F"></a>ABC176F</h3><p>这是个热身dp题，对于后面的毒瘤dp题1007E来说，相当于热身了一波。</p>
 <p>每次五选三，相当于留下两个。</p>
 <p>我们先设计一个dp：做到 $i$，留下的两个是 $x,y$，最大得多少分。$i$ 每次增加 $3$ 个转移。</p>
-<p>如果记位置，我们需要一个很大力的讨论三个是否是相同的，如何如何转移。复杂度大概是 $10O(n^3)$，这个 $10$ 是从 ${x,y,i+1,i+2,i+3}$ 中取两个的枚举复杂度。而且这个形式一看就没法优化，没有前途。</p>
+<p>如果记位置，我们需要一个很大力的讨论三个是否是相同的，如何如何转移。复杂度大概是 $10O(n^3)$，这个 $10$ 是从 $\{x,y,i+1,i+2,i+3\}$ 中取两个的枚举复杂度。而且这个形式一看就没法优化，没有前途。</p>
 <p>最关键的是这个做法没有利用到值域是 $[1,n]$。</p>
 <p>考虑记录值。即，$f(i,x,y)$ 表示做到 $i$，剩下的两个值是 $x,y$，最大的得分。</p>
 <p>依然是每次跳 $3$ 个。设 $i+1,i+2,i+3$ 的值分别是 $a,b,c$。考虑转移：</p>
@@ -158,7 +158,7 @@
 <ol>
 <li>如果前面的车都没有到 $i$。<ul>
 <li>满足 $a_i+jb_i\le c_i$ 且 $f(i-1,j)&lt;INF$，更新 $f(i-1,j)\to f(i,j)$</li>
-<li>令 $N=\sum\limits<em>{x&lt;i} a_x+jb_x,N’=\sum\limits</em>{x\le i} a_x+jb_x$。若 $K\lceil\frac{N}{K}\rceil \le N’$，更新 $g(i,j)=\lceil\dfrac{N}{K}\rceil$</li>
+<li>令 $N=\sum\limits_{x&lt;i} a_x+jb_x,N’=\sum\limits_{x\le i} a_x+jb_x$。若 $K\lceil\frac{N}{K}\rceil \le N’$，更新 $g(i,j)=\lceil\dfrac{N}{K}\rceil$</li>
 <li>这里的转移，最后一维 $0/1$ 不动</li>
 </ul>
 </li>
@@ -168,7 +168,7 @@
 <li>第 $i$ 个位置会变成 $rem+b_i(j-r)$，可能超过 $c_i$。这部分需要清掉。</li>
 <li>需要 $need=\lceil \dfrac{rem+b_i(j-r)-c_i}{K} \rceil$ 步解决这个，但要满足 $K*need\le rem$</li>
 <li>若满足，更新 $g(i,r)+need+f(i-1,j-r,0) \to f(i,j,k)$</li>
-<li>$g$ 差不多。设 $N=\sum\limits<em>{x&lt;i} (j-r)b_x$，$N’=N=\sum\limits</em>{x\le i} (j-r)b_x$。</li>
+<li>$g$ 差不多。设 $N=\sum\limits_{x&lt;i} (j-r)b_x$，$N’=N=\sum\limits_{x\le i} (j-r)b_x$。</li>
 <li>需满足 $K\lceil\dfrac{N}{K}\rceil \le N’$，更新 $g(i,r)+need+\lceil\dfrac{N}{K}\rceil \to g(i,j,k)$</li>
 </ul>
 </li>
@@ -206,7 +206,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-17~19.html" data-id="ckzy4tl2g001g9gun2ao1523x" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-17~19.html" data-id="ckzy527va001gksun3ulv9zms" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -277,5 +277,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>

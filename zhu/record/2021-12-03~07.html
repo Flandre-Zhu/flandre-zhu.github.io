@@ -91,7 +91,7 @@
 <p>真tm傻逼，我C，我会做了，但是实现很jb复杂，网上还找不到题解。</p>
 <p>还好在tc的客户端中找到了 xudyh 的代码。这玩意还不支持复制，我手动敲了一遍。ctmd topcoder。</p>
 <p>做法比较简单，和hyh激烈讨♂论一番后不难得到。</p>
-<p>首先处理出每个 $p(i)$ 最强的限制，就是它最深可以确定在谁的子树里。就是所有涉及到 $i$ 的限制中，最深的LCA，设这个最深的限制点为 $sub(i)$。把 $i$ 挂在 $sub(i)$ 上。开 $n$ 张图，设为 $G<em>1…G_n$。 如果 $i,j$ 都挂在 $sub(i)$ 上，且要求 $LCA(p(i),p(j))=sub(i)$，则在 $G</em>{sub(i)}$ 上，对 $i,j$ 进行一个连边。连边表示这两个点不能同属左/右子树。</p>
+<p>首先处理出每个 $p(i)$ 最强的限制，就是它最深可以确定在谁的子树里。就是所有涉及到 $i$ 的限制中，最深的LCA，设这个最深的限制点为 $sub(i)$。把 $i$ 挂在 $sub(i)$ 上。开 $n$ 张图，设为 $G_1…G_n$。 如果 $i,j$ 都挂在 $sub(i)$ 上，且要求 $LCA(p(i),p(j))=sub(i)$，则在 $G_{sub(i)}$ 上，对 $i,j$ 进行一个连边。连边表示这两个点不能同属左/右子树。</p>
 <p>然后从下往上做。考虑到下面的子树填好之后，对于上面的点来说，下面空了一堆空，但都是 “左子树的空” 和 “右子树的空”，只关心是左是右，而具体在哪，我们完全不用在意。因此从下往上填就是对的。</p>
 <p>考虑当前在 $u$ 点，已知左右有 $L,R$ 个空的时候，如何填。枚举谁做根，并把图上这个点删去。那么要求剩下的图是个二分图。做完二分图染色之后，我们还需要一个类似背包的dp，来判断是否能分成两半，一半不超过 $L$ 个，一半不超过 $R$ 个。写个 $O(n^3)$ 的 dp 即可。状态与转移sb，略。记录一下解。</p>
 <p>记录完解之后，我们把左右的空的位置也记一下。把我们的划分好的方案，依次放到 $L,R$ 中去。</p>
@@ -186,7 +186,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-03~07.html" data-id="ckzy4tl2d00199gunaghf620c" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-03~07.html" data-id="ckzy527v50019ksuneo4keent" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -257,5 +257,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>

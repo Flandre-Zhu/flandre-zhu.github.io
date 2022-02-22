@@ -95,8 +95,8 @@
 <blockquote>
 <p>期望的问题中，通常设的是从当前到终止状态的xxx期望。因为这样方便转移，也方便确定边界条件。</p>
 </blockquote>
-<p>设原题中的时间限制为 $T$，超过 $T$ 就罚款。为了方便处理，第二位开到 $2T$。边界条件为 $f(n,t)=[t&gt;T]\times x$，$x$ 为罚款。$f(u,t)=x+dis(u,n),\ t&gt;T$。$dis$ 表示最短路，可以floyd做。</p>
-<p>然后考虑转移。对于 $u$，设 $trans(t,u,v)$ 表示 $(u,t)$ 走 $v$ 的转移的花费。那么 $f(u,t)=\min{u\to v,\ trans(t,u,v)}$</p>
+<p>设原题中的时间限制为 $T$，超过 $T$ 就罚款。为了方便处理，第二位开到 $2T$。边界条件为 $f(n,t)=[t&gt;T]\times x$，$x$ 为罚款。$f(u,t)=x+dis(u,n), t&gt;T$。$dis$ 表示最短路，可以floyd做。</p>
+<p>然后考虑转移。对于 $u$，设 $trans(t,u,v)$ 表示 $(u,t)$ 走 $v$ 的转移的花费。那么 $f(u,t)=\min\{u\to v, trans(t,u,v)\}$</p>
 <blockquote>
 <p>因为 $u,v$ 一定是原图上的边，实现时，我们把状态 $u,v$ 用边的编号 $i$ 表示，状态数从 $Tn^2$ 降到 $Tm$，即变成 $trans(t,i)$。但考虑起来还是 $trans(t,u,v)$ 更加方便，后面用这个写法。</p>
 </blockquote>
@@ -114,7 +114,7 @@ trans(t,u,v)=cost(u,v)+\sum\limits_{d=1}^{T} P(d)\times f(v,t+d)</script><p>其�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-08.html" data-id="ckzy4tl2e001a9gun5797e5f2" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2021-12-08.html" data-id="ckzy527v5001aksun9bmzbrpr" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -185,5 +185,20 @@ trans(t,u,v)=cost(u,v)+\sum\limits_{d=1}^{T} P(d)\times f(v,t+d)</script><p>其�
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>

@@ -106,16 +106,16 @@
 <p>考虑预处理，然后 $O(1)$ 算切掉每条边的答案。</p>
 <p>首先环外的那些树的直径先搞出来，切每条边的答案都要和这个数取max。</p>
 <p>对于基环树，我们常考虑断环为链（复制一倍）。然后切掉一条边后剩下的链就是这条两倍长的链上的一段区间。</p>
-<p>设每个点的环外子树深度为 $d_i$，链上的边权的前缀和为 $s_i$。那么一段区间 $[l,r]$ 的直径为 $\max{s_j-s_i+d_i+d_j| l\le i&lt;j\le r}$</p>
+<p>设每个点的环外子树深度为 $d_i$，链上的边权的前缀和为 $s_i$。那么一段区间 $[l,r]$ 的直径为 $\max\{s_j-s_i+d_i+d_j| l\le i&lt;j\le r\}$</p>
 <p>然后有两种做法。一种是线段树做，复杂度 $O(n\log n)$。当然，也存在线性做法。</p>
 <p>设环长为 $m$。首先特殊处理切 $1,m$ 的情况。接下来是切 $i,i+1$ 的情况，而此时它一定包含了 $1,m$ 这条边。体现在链上就是它跨过了第一个周期和第二个周期的分界线 $m,m+1$。设链上的这个区间为 $[l,r]$ （$r-l+1=m$）。处理：</p>
 <ul>
-<li>$p(l)$：区间 $[l,m]$ 中，$\max{s_j-s_i+d_i+d_j}$</li>
-<li>$p(r)$：区间 $[m+1,r]$ 中，$\max{s_j-s_i+d_i+d_j}$</li>
-<li>$q(l)$：区间 $[l,m]$ 中，$\max{d_i+s_m-s_i}$</li>
-<li>$q(r)$：区间 $[m+1,r]$ 中，$\max{d_i+s_i-s_m}$</li>
+<li>$p(l)$：区间 $[l,m]$ 中，$\max\{s_j-s_i+d_i+d_j\}$</li>
+<li>$p(r)$：区间 $[m+1,r]$ 中，$\max\{s_j-s_i+d_i+d_j\}$</li>
+<li>$q(l)$：区间 $[l,m]$ 中，$\max\{d_i+s_m-s_i\}$</li>
+<li>$q(r)$：区间 $[m+1,r]$ 中，$\max\{d_i+s_i-s_m\}$</li>
 </ul>
-<p>都很好处理，就递推一遍即可。然后 $[l,r]$ 这段区间构成的树的直径就是 $max{p(l),p(r),q(l)+q(r)+w,d_0}$。其中 $w$ 表示 $1,m$ 边的边权，$d_0$ 表示环外子树的直径的最大值。</p>
+<p>都很好处理，就递推一遍即可。然后 $[l,r]$ 这段区间构成的树的直径就是 $max\{p(l),p(r),q(l)+q(r)+w,d_0\}$。其中 $w$ 表示 $1,m$ 边的边权，$d_0$ 表示环外子树的直径的最大值。</p>
 <p>注意一下细节。</p>
 <p><a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/7YHXKjCb7T/">代码</a></p>
 <h2 id="CF797F"><a href="#CF797F" class="headerlink" title="CF797F"></a>CF797F</h2><p>眼睛看。每个耗子肯定到比较近的那个洞里去。简单想想肯定是，连续一段耗子进一个洞。</p>
@@ -170,7 +170,7 @@
 <li>$\forall x\in S(v),a_u\neq x$，$v$ 为 $u$ 的儿子</li>
 <li>$\forall x\in S(v_1)\cap S(v_2),a_u&gt;x$，$v_1\neq v_2$ 且均为 $u$ 的儿子</li>
 </ul>
-<p>记 $X=\bigcup S(v),Y=\bigcup S(v<em>1)\cap S(v_2)$。这俩均可以一边加入子树一边维护。然后 $a_u$ 不仅不能在 $X$ 里面，还得超过 $Y</em>{max}$。很容易处理出它的最小值。</p>
+<p>记 $X=\bigcup S(v),Y=\bigcup S(v_1)\cap S(v_2)$。这俩均可以一边加入子树一边维护。然后 $a_u$ 不仅不能在 $X$ 里面，还得超过 $Y_{max}$。很容易处理出它的最小值。</p>
 <p>然后 $S(u)$ 显然就是把 $X$ 和 $a_u$ 并起来，然后去掉 $&lt;a_u$ 的就行了。</p>
 <p>由于 $a$ 的值不超过 $\log$ （由点分治结论），这个 $S$ 可以用一个 int，用状压来维护。复杂度是 $O(n)$ 的 （位运算 $O(1)$）</p>
 <p><a target="_blank" rel="noopener" href="https://paste.ubuntu.com/p/xbhZKT9jPs/">代码</a></p>
@@ -178,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://flandre-zhu.github.io/zhu/record/2022-01-22-bef.html" data-id="ckzy4tl2g001h9gunbcmx1l8j" data-title="" class="article-share-link">Share</a>
+      <a data-url="https://flandre-zhu.github.io/zhu/record/2022-01-22-bef.html" data-id="ckzy527va001hksuneano1d17" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -249,5 +249,20 @@
 
 
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
 </body>
 </html>
